@@ -1,5 +1,6 @@
 import React from 'react';
 import '../components/css/products.css';
+import ProjectOneImage from '../imgs/hlfplano.png'
 
 const ProjectList = () => {
     return (
@@ -12,9 +13,6 @@ const ProjectList = () => {
                 </div>
 
                 <div className="products-image">
-                    <div>
-                        <img src="img/main-track-statistics.png" alt="Rowing Machine" /> 
-                    </div>    
                 </div>
             </section>
             <section className="products-2">
