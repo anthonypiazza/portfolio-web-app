@@ -1,0 +1,33 @@
+.problem{
+    background-color: #f2f2f2;
+    padding-top: 53px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.problem-text > h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.problem-text > p{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0px 28%;
+    line-height: 1.4;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box-div{
+    background-color: black;
+    margin: 40px 2.68%;
+    padding: 15px 3.2%;
+}
