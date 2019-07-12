@@ -1,20 +1,37 @@
 import React from 'react';
-import '../components/css/problem.css';
+import '../components/css/Mission.css';
 
 const Mission = () => {
     return (
         <section className="problem">
             <div className="problem-text">
-                <h2>Why Lambda Fit?</h2>
-                <p>We know how hard it is to consistently lose stubborn body fat and bust through plateaus 
-                while simultaneously managing everything else going on in your life!</p>
+                <h2>My Developer Skillset and Toolstack Includes...</h2>
             </div>
             <div className="boxes">
-                <div className="box-div">Box 1</div>
-                <div className="box-div">Box 2</div>
-                <div className="box-div">Box 3</div>
-                <div className="box-div">Box 4</div>
-                <div className="box-div">Box 5</div>
+                <div className="box-div">
+                    <i class="fab fa-react"></i>
+                    <p>ReactJS</p>
+                </div>
+                <div className="box-div">
+                    <i class="fab fa-js"></i>
+                    <p>Javascript</p>
+                </div>
+                <div className="box-div">
+                    <i class="fab fa-css3-alt"></i>
+                    <p>CSS3</p>
+                </div>
+                <div className="box-div">
+                    <i class="fab fa-html5"></i>
+                    <p>HTML5</p>
+                </div>
+                <div className="box-div">
+                    <i class="fab fa-less"></i>
+                    <p>LESS</p>
+                </div>
+                <div className="box-div">
+                    <i class="fab fa-git"></i>
+                    <p>GitFlow</p>
+                </div>
             </div>
         </section>        
     )

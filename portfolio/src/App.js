@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Mission from './components/Mission';
-import ProjectList from './components/ProjectList';
+import Portfolio from '././components/Portfolio';
 
 // document.onmousemove = animateCircle;
 
@@ -37,9 +37,9 @@ function App() {
     <div
       className="App">
       <Nav />
-      <Hero />
+      <Hero id="section1" />
       <Mission />
-      <ProjectList />{/* 
+      <Portfolio id="section2" />{/* 
       <Skills />
       <About />
       <Contact />

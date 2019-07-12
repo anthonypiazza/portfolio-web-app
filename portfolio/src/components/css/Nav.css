@@ -4,6 +4,9 @@
   align-items: center;
   padding: 0px 9%;
   background-color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .nav{
@@ -13,19 +16,32 @@
 nav > a{
   text-decoration: none;
   color: white;
-  padding-right: 6.3%;
+  padding: 0px 3.2%;
   font-size: 1rem;
 }
 
 nav > a:hover{
     font-weight: bold;
+    transition: transform .2s;
+    transform: scale(1.1);
+    border: 1px white solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+a.active{
+    font-weight: bold;
+    transition: transform .2s;
+    transform: scale(1.1);
+    border: 1px white solid;
+    border-radius: 10px;
 }
 
 .name-div{
   width: 33%;
 }
 
-div > .nav-logo > h1{
+.name-div > #anthony{
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -48,4 +64,9 @@ button{
   text-decoration: none;
   color: black;
   cursor: pointer;
+}
+
+button:hover{
+  transition: transform .2s;
+  transform: scale(1.1);
 }

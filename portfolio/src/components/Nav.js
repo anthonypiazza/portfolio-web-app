@@ -1,21 +1,21 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import '../components/css/Nav.css';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Nav = () => {
     return(
         <section className="nav-bar">
             <nav className="nav">
-                <NavLink className="nav-items" link to="/">Home</NavLink>
-                <NavLink className="nav-items" link to="/projects">Projects</NavLink>   
-                <NavLink className="nav-items" link to="/aboutme">About Me</NavLink>
-                <NavLink className="nav-items" link to="/skills">Skills</NavLink>     
+                <Link activeClass="active" exact to="section1" spy={true} smooth={true} offset={-70} duration= {500}>Home</Link>
+                <Link activeClass="active" to="section2" spy={true} smooth={true} offset={-70} duration= {500}>Projects</Link>   
+                <Link activeClass="active" to="section3" spy={true} smooth={true} offset={-70} duration= {500}>About Me</Link>
+                <Link activeClass="active" to="section4" spy={true} smooth={true} offset={-70} duration= {500}>Skills</Link>     
             </nav>
             <div className="name-div">
-                <a className="nav-logo"><h1>ANTHONY PIAZZA</h1></a>
+                <h1 id="anthony">ANTHONY PIAZZA</h1>
             </div>
             <div className="contact-div">
-                <NavLink className="cta" link to="/contact"><button>Contact Me</button></NavLink>
+                <Link className="cta" to="section5" spy={true} smooth={true} offset={-70} duration= {500}><button>Contact Me</button></Link>
             </div>
         </section>    
     )
