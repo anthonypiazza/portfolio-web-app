@@ -1,0 +1,199 @@
+.products { 
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 5px;
+    margin-top: -5px;
+    margin-bottom: -3px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.products-text{
+    width: 50%;
+    padding-top: 155px;
+    padding-bottom: 155px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+
+}
+
+.products-text > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    text-align: left;
+    padding: 0px 10%;
+}
+        
+.products-text > p{
+    margin-top: 18px;
+    line-height: 1.45;
+    padding: 0px 10%;
+    font-size: 1.3rem;
+    text-align: left;
+}
+        
+.products-text > .learn-more > button{
+    margin-top: 8px;
+    letter-spacing: .3px;
+    border: 1px solid black;
+    padding: 18px 7.3%;
+    margin-left: 10%;
+    margin-right: 60%;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+.link-to-build-1{
+    margin: 0px 70% 0px 10%;
+}
+
+.products > .products-image{
+    width: 50%;
+    background-color: black;
+}
+
+.products-image > div{
+    margin: 118px 27.6% 120px 27.6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 59.5px 0% 59.5px 0%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.products-image > div > img {
+    width: 100%;
+    height: auto;
+}
+
+.products-2 { 
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    margin-top: -5px;
+    margin-bottom: -3px;
+}
+
+.products-text-2{
+    background-color: #f2f2f2;
+    width: 50%;
+    padding-left: 9.3%;
+    padding-top: 191px;
+}
+        
+.products-text-2 > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+.products-text-2 > p{
+    margin-top: 45px;
+    line-height: 1.45;
+    padding-right: 28%;
+    font-size: 2rem;
+}
+        
+.products-text-2 > .learn-more > button{
+    margin-top: 26px;
+    margin-left: .38%;
+    letter-spacing: .3px;
+    border: 1px solid black;
+    padding: 19px 8.5%;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: black;
+    cursor: pointer;
+}
+
+.products-2 > .products-image-2{
+    width: 50%;
+    background-color: black;
+}
+
+.products-image-2 > div{
+    margin: 125px 27.6% 120px 27.6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 89.5px 0% 89.5px 0%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.products-image-2 > img {
+    width: 100%;
+    height: auto;
+}
+   
+.products-3 { 
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 5px;
+    margin-top: -5px;
+    margin-bottom: -3px;
+}
+    
+.products-text-3{
+    width: 50%;
+    padding-left: 8%;
+    padding-top: 184px;
+}
+        
+.products-text-3 > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+.products-text-3 > p{
+    margin-top: 45px;
+    line-height: 1.45;
+    padding-right: 28%;
+    font-size: 2rem;
+}
+        
+.products-text-3 > .learn-more > button{
+    margin-top: 28px;
+    letter-spacing: .3px;
+    border: 1px solid black;
+    padding: 19px 8.3%;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: black;
+    cursor: pointer;
+}
+
+.products-image-3{
+    width: 50%;
+    background-color: black;
+}
+
+.products-image-3 > div{
+    margin: 118px 27.6% 120px 27.6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16.5px 0% 16.5px 0%;
+    background-color: white;
+    border-radius: 5px;
+}
+            
+.products-image-3 > img {
+    width: 108%;
+    height: auto;
+}

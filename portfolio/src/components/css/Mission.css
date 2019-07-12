@@ -35,4 +35,11 @@ i{
     background-color: black;
     margin: 40px 2.68%;
     padding: 15px 3.2%;
+    color: white;
 }
+
+.box-div:hover{
+    transition: transform .2s;
+    transform: scale(1.1);
+}
+
