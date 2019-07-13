@@ -3,8 +3,10 @@ import './App.css';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Mission from './components/Mission';
-import Portfolio from '././components/Portfolio';
-
+import Portfolio from './components/Portfolio';
+import AboutMe from './components/AboutMe';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 // document.onmousemove = animateCircle;
 
 // // const colors = ['#ccc', '#6cf', '#eba13a'];
@@ -38,12 +40,12 @@ function App() {
       className="App">
       <Nav />
       <Hero id="section1" />
-      <Mission />
-      <Portfolio id="section2" />{/* 
-      <Skills />
-      <About />
-      <Contact />
-      <Footer /> */}
+      <Mission id="section2" />
+      <Portfolio id="section3" />
+      <AboutMe id="section4" />
+      <Contact id="section5" />
+      <Footer />
+      {/* <Skills /> */}
     </div>
   );
 }
