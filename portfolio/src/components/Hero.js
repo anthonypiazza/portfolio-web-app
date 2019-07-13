@@ -26,21 +26,41 @@ const Hero = props => {
                 <div className="second-container">
                     <div className="hero-text">
                         <div>
-                            <h1 className="second-header">San Diego State University Class of 2016</h1>    
+                            <h1 className="second-header">Github Contributions</h1>    
                         </div>
                         <div className="second-tagline">
-                            <p className="degree">Bachelor of Science in Business Administration</p>
-                            <p className="education-details">Dean's List - Spring of 2014 and Spring of 2015</p>
-                            <p className="education-details">Studied at Oxford University during Summer 2015 session (Pacific University Exchange Program)</p>
-                            <p className="education-details">Sigma Chi Fraternity & Associated Student Leadership</p>
-
+                            <p className="degree"></p>
+                            <p className="education-details"></p>
+                            <p className="education-details"></p>
+                            <p className="education-details"></p>
+                        </div>
+                        <div className="button-div-2">
+                            <Link spy={true} smooth={true} offset={-70} duration= {500} className="learn-more" to="section4">View Education Details</Link>
                         </div>
                     </div>
                     {/* <div className="hero-image">
                         <img src={ProfileImg} alt="Anthony Piazza"/>
                     </div> */}
                 </div>
-              <div><img src="/path/to/image-0.png"/></div>
+                <div className="third-container">
+                    <div className="hero-text">
+                        <div>
+                            <h1 className="third-header">San Diego State University Class of 2016</h1>    
+                        </div>
+                        <div className="third-tagline">
+                            <p className="degree">Bachelor of Science in Business Administration</p>
+                            <p className="education-details">Dean's List - Spring of 2014 and Spring of 2015</p>
+                            <p className="education-details">Studied at Oxford University during Summer 2015 session (Pacific University Exchange Program)</p>
+                            <p className="education-details">Sigma Chi Fraternity & Associated Student Leadership</p>
+                        </div>
+                        <div className="button-div-3">
+                            <Link spy={true} smooth={true} offset={-70} duration= {500} className="learn-more" to="section4">View Education Details</Link>
+                        </div>
+                    </div>
+                    {/* <div className="hero-image">
+                        <img src={ProfileImg} alt="Anthony Piazza"/>
+                    </div> */}
+                </div>
             </AwesomeSlider>
         </section>   
     )

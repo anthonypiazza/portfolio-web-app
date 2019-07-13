@@ -4,42 +4,48 @@ import '../components/css/Portfolio.css';
 
 const Portfolio = (props) => {
     return (
-        <div id={props.id}>
+        <div className="portfolio-container" id={props.id}>
+            <h1 className="title-portfolio">Web Application Porfolio</h1>
+            <hr></hr>
             <section className="products">
                 <div className="products-text">
-                    <h2>Product</h2>
+                    <h2>Streemly Organizational Chart</h2>
                     <p>We have concentrated our research efforts around making quick iterations of how to provide a rich UX/UI for gym aficionados.</p> 
-                    <button className="link-to-build-1">Learn More</button>
+                    <div className="button-div">
+                        <button><i class="fab fa-github"/>View the Code</button>
+                        <button>Official Website</button>
+                    </div>
                 </div>
 
                 <div className="products-image">
                 </div>
             </section>
             <section className="products-2">
-                <div className="products-text-2">
-                    <h2>Product</h2>
+                <div className="products-text">
+                    <h2>Satoshi's Law</h2>
                     <p>Concentrated our research efforts around making quick iterations of how to provide a rich UX/UI for gym aficionados.</p> 
-                    <a className="learn-more" href="#"><button className="link-to-build-2">Learn More</button></a>
+                    <div className="button-div">
+                        <button><i class="fab fa-github"/>View the Code</button>
+                        <button>Official Website</button>
+                    </div>
                 </div>
 
                 <div className="products-image-2">
-                    <div>
-                        <img src="img/track-statistic.png" alt="Rowing Machine" /> 
-                    </div>    
+  
                 </div>
             </section>
 
-            <section className="products-3">
-                <div className="products-text-3">
+            <section className="products">
+                <div className="products-text">
                     <h2>Product</h2>
                     <p>We have concentrated our research efforts around making quick iterations of how to provide a rich UX/UI for gym aficionados.</p> 
-                    <a className="learn-more" href="https://boring-euclid-601ad3.netlify.com/"><button>Learn More</button></a>
+                    <div className="button-div">
+                        <button><i class="fab fa-github"/>View the Code</button>
+                        <button>Official Website</button>
+                    </div>
                 </div>
 
-                <div className="products-image-3">
-                    <div>
-                        <img src="img/swole.png" alt="Rowing Machine"/> 
-                    </div>    
+                <div className="products-image">   
                 </div>
             </section>    
         </div>    

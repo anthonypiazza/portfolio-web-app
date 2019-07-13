@@ -1,3 +1,26 @@
+.title-portfolio{
+    font-family: 'Montserrat', sans-serif;
+    padding: 130px 0% 0px 0%;
+    margin: 0px;
+    /* background: rgb(186,186,186);
+    background: linear-gradient(180deg, rgba(186,186,186,1) 20%, rgba(255,255,255,1) 35%); */
+}
+
+.button-div > button{
+    margin-right: 30px;
+}
+
+button > i{
+    color: black;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+hr{
+    border-top: 2px solid black;
+    margin: 10px 39% 50px 39%;
+}
+
 .products { 
     display: flex;
     flex-direction: row-reverse;
@@ -5,6 +28,7 @@
     margin-top: -5px;
     margin-bottom: -3px;
     font-family: 'Montserrat', sans-serif;
+    background-color: white;
 }
 
 .products-text{
@@ -33,27 +57,6 @@
     text-align: left;
 }
         
-.products-text > .learn-more > button{
-    margin-top: 8px;
-    letter-spacing: .3px;
-    border: 1px solid black;
-    padding: 18px 7.3%;
-    margin-left: 10%;
-    margin-right: 60%;
-    border-radius: 5px;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: black;
-    cursor: pointer;
-    margin-top: 0px;
-}
-
-.link-to-build-1{
-    margin: 0px 70% 0px 10%;
-}
-
 .products > .products-image{
     width: 50%;
     background-color: black;
@@ -80,120 +83,16 @@
     padding-top: 5px;
     margin-top: -5px;
     margin-bottom: -3px;
-}
-
-.products-text-2{
-    background-color: #f2f2f2;
-    width: 50%;
-    padding-left: 9.3%;
-    padding-top: 191px;
-}
-        
-.products-text-2 > h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: bolder;
-}
-
-.products-text-2 > p{
-    margin-top: 45px;
-    line-height: 1.45;
-    padding-right: 28%;
-    font-size: 2rem;
-}
-        
-.products-text-2 > .learn-more > button{
-    margin-top: 26px;
-    margin-left: .38%;
-    letter-spacing: .3px;
-    border: 1px solid black;
-    padding: 19px 8.5%;
-    border-radius: 5px;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-size: 1.7rem;
-    color: black;
-    cursor: pointer;
-}
+}        
 
 .products-2 > .products-image-2{
     width: 50%;
     background-color: black;
 }
 
-.products-image-2 > div{
-    margin: 125px 27.6% 120px 27.6%;
+.button-div{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 89.5px 0% 89.5px 0%;
-    background-color: white;
-    border-radius: 5px;
-}
-
-.products-image-2 > img {
-    width: 100%;
-    height: auto;
-}
-   
-.products-3 { 
-    display: flex;
-    flex-direction: row-reverse;
-    padding-top: 5px;
-    margin-top: -5px;
-    margin-bottom: -3px;
-}
-    
-.products-text-3{
-    width: 50%;
-    padding-left: 8%;
-    padding-top: 184px;
-}
-        
-.products-text-3 > h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: bolder;
-}
-
-.products-text-3 > p{
-    margin-top: 45px;
-    line-height: 1.45;
-    padding-right: 28%;
-    font-size: 2rem;
-}
-        
-.products-text-3 > .learn-more > button{
-    margin-top: 28px;
-    letter-spacing: .3px;
-    border: 1px solid black;
-    padding: 19px 8.3%;
-    border-radius: 5px;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-size: 1.7rem;
-    color: black;
-    cursor: pointer;
-}
-
-.products-image-3{
-    width: 50%;
-    background-color: black;
-}
-
-.products-image-3 > div{
-    margin: 118px 27.6% 120px 27.6%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16.5px 0% 16.5px 0%;
-    background-color: white;
-    border-radius: 5px;
-}
-            
-.products-image-3 > img {
-    width: 108%;
-    height: auto;
+    justify-content: flex-start;
+    padding-left: 10%;
+    width: 90%;
 }
