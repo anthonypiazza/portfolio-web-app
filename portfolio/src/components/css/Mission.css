@@ -1,6 +1,6 @@
 .problem{
-    background: rgb(186,186,186);
-    padding-top: 83px;
+    background: #dadada;
+    margin-top: 110px;
     display: flex;
     flex-direction: column;
     padding-bottom: 83px;

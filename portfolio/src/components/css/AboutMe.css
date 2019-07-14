@@ -1,12 +1,19 @@
+.about-me-page{
+    background: #dadada;
+    padding-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 60px;
+}
+
 .team-member-headline{
     font-size: 1rem;
     text-align: center;
-    margin-top: 60px;
+    padding-top: 60px;
 }
     
 .team-member-headline > div > hr{
-    border-color:#3a4347;
-    margin: 10px 45%;
+    border-color:black;
+    margin: 10px 45% 50px 45%;
 
 }
 
@@ -21,30 +28,28 @@
     flex-wrap: wrap;
     margin: 0px 15%;
     align-items: center;
-}
-
-.team-member{
-    border-radius: 10px;
-    margin: 60px 5% 0px 8%;
-}    
-
-.border-blank{
-    transition: transform .2s;
-}
+    border: 1px solid black;
+    margin: 5px 20% 5px 20%;
+}  
 
 .team-image{
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin-right: 10%;
+    border-right: 1px solid black;
+    padding: 10px 5%;
 }
 
 .team-image > img{
-    height: 237px;
+    height: auto;
+    width: 200px;
     border-radius: 5px;
-    border-bottom: white solid 2px;
+    border: black solid 2px;
 }
 
 .team-image > h3{
+    font-size: 1rem;
     font-style: italic;
 }
 
@@ -55,5 +60,9 @@
 .team-member-info > p{
     text-align: left;
     padding-bottom: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+.team-image > hr{
+    margin: 0px 35%;
 }

@@ -1,0 +1,38 @@
+footer {
+    background-color:#1d2326;
+    width: 100%;
+    align-items: center;
+    line-height: 1.5;
+    margin-top: -2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px 0%;
+    font-size: 1.2rem;
+}
+
+.copyright{
+    width: 50%
+}
+        
+.copyright > p {
+    text-align: center;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 0px 15%;
+}
+
+.disclaimers{
+    display:flex;
+    align-items: center;
+    width: 50%;
+    justify-content: flex-end;
+    margin-right: 2%;
+    flex-direction: row;
+}
+
+.disclaimers > a:hover {
+    -webkit-text-stroke: 1px white; 
+    text-align: right;
+    margin-right: 5%;
+}

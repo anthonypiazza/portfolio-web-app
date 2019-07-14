@@ -56,7 +56,7 @@ a.active{
   width: 33%;
 }
 
-button{
+.cta{
   padding: 10px 45px;
   border-radius: 5px;
   background-color: white;
@@ -64,9 +64,10 @@ button{
   text-decoration: none;
   color: black;
   cursor: pointer;
+  font-size: .9rem;
 }
 
-button:hover{
+.contact-div:hover{
   transition: transform .2s;
   transform: scale(1.1);
 }
