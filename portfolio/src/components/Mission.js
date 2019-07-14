@@ -1,9 +1,9 @@
 import React from 'react';
 import '../components/css/Mission.css';
 
-const Mission = () => {
+const Mission = props => {
     return (
-        <section className="problem">
+        <section id={props.id} className="problem">
             <div className="problem-text">
                 <h2>My Developer Skillset and Toolstack Includes...</h2>
             </div>

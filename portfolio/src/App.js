@@ -5,8 +5,8 @@ import Hero from './components/Hero';
 import Mission from './components/Mission';
 import Portfolio from './components/Portfolio';
 import AboutMe from './components/AboutMe';
+import Clients from './components/Clients';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 // document.onmousemove = animateCircle;
 
 // // const colors = ['#ccc', '#6cf', '#eba13a'];
@@ -43,8 +43,8 @@ function App() {
       <Mission id="section2" />
       <Portfolio id="section3" />
       <AboutMe id="section4" />
-      <Contact id="section5" />
-      <Footer />
+      <Clients id="section5" />
+      <Contact id="section6" />
       {/* <Skills /> */}
     </div>
   );
