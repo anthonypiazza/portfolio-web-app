@@ -10,6 +10,12 @@
     justify-content: space-around;
 }
 
+.photo-grid-2{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 5% 0px 5%;
+}
+
 .site-photo{
     width: 20%;
 }
@@ -59,4 +65,9 @@
     cursor: pointer;
     transition: transform .2s;
     transform: scale(1.1);
+}
+
+.text > a{
+    text-decoration: none;
+    color: black;
 }
