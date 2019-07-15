@@ -9,27 +9,27 @@ const Mission = props => {
             </div>
             <div className="boxes">
                 <div className="box-div">
-                    <i class="fab fa-react"></i>
+                    <i className="fab fa-react"></i>
                     <p>ReactJS</p>
                 </div>
                 <div className="box-div">
-                    <i class="fab fa-js"></i>
+                    <i className="fab fa-js"></i>
                     <p>Javascript</p>
                 </div>
                 <div className="box-div">
-                    <i class="fab fa-css3-alt"></i>
+                    <i className="fab fa-css3-alt"></i>
                     <p>CSS3</p>
                 </div>
                 <div className="box-div">
-                    <i class="fab fa-html5"></i>
+                    <i className="fab fa-html5"></i>
                     <p>HTML5</p>
                 </div>
                 <div className="box-div">
-                    <i class="fab fa-less"></i>
+                    <i className="fab fa-less"></i>
                     <p>LESS</p>
                 </div>
                 <div className="box-div">
-                    <i class="fab fa-git"></i>
+                    <i className="fab fa-git"></i>
                     <p>GitFlow</p>
                 </div>
             </div>

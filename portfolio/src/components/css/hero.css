@@ -18,9 +18,9 @@
     align-items: flex-start;
 }
 
-.aws-sld__bullets{
+#section1 > .aws-sld > .aws-sld__bullets{
     /* margin-left: 115px; */
-    background: #dadada;
+    background-color: #eff0f0;
 }
 
 .aws-sld {

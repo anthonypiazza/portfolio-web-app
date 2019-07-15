@@ -1,20 +1,19 @@
-.about-me-page{
+/* .about-me-page{
     background: #dadada;
     padding-bottom: 50px;
     font-family: 'Montserrat', sans-serif;
     margin-top: 60px;
-}
+} */
 
 .team-member-headline{
     font-size: 1rem;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 10px;
 }
-    
-.team-member-headline > div > hr{
-    border-color:black;
-    margin: 10px 45% 50px 45%;
 
+.team-member-headline > div > h1{
+    font-size: 2rem;
+    margin: 0px 0%;
 }
 
 .team-member-headline > div > p{
@@ -30,6 +29,7 @@
     align-items: center;
     border: 1px solid black;
     margin: 5px 20% 5px 20%;
+    background-color: #eff0f0;
 }  
 
 .team-image{

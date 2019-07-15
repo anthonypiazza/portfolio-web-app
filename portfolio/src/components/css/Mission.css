@@ -1,5 +1,5 @@
 .problem{
-    background: #dadada;
+    background: #eff0f0;
     margin-top: 110px;
     display: flex;
     flex-direction: column;
@@ -36,6 +36,7 @@ i{
     margin: 40px 2.68%;
     padding: 15px 3.2%;
     color: white;
+    border-radius: 5px;
 }
 
 .box-div:hover{

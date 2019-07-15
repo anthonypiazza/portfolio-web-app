@@ -1,73 +1,62 @@
-.client-carousel{
-    background-color: white;
-}
-/* .features {
+.client-section{
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 40px 10%;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.features-text{
-    text-align: center;
-    width: 100%;
-    padding-right: 5%;
-    text-align: center;
-
-    h2 {
-        margin: 30px 0% 2px 0%;
-        font-size: @h1-font;
-    }
-
-    hr {
-        margin: 10px 35% 10px 35%;
-    }
-        
-    .features-list{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: 10px 0% 60px 0%;
-        padding:0px 2% 0px 2%;
-    }
-
-    .border-blank{
-        transition: transform .2s;
-    }
-
-    div{
-        width: 25%;
-        margin: 5px 0%;
-    }
-
-    img{
-        background-color: white;
-        border-radius: 18px;
-        margin-top: 40px;
-    }
-    h2{
-        font-size: 1.8rem;
-        margin: 10px 0% 10px 0%; 
-    }
-
-    p{
-        font-size: 1.5rem;
-        line-height: 1.3;
-        padding: 10px 15% 0px 15%;
-    }
-    hr{
-        margin: 0px 40%;
-    }
+.photo-grid{
+    display: flex;
+    justify-content: space-around;
 }
 
-.features-image{
-    display:none;
+.site-photo{
+    width: 20%;
 }
 
-@media @desktop{
-    .flash-border{
-        transform: scale(1.1);
-    }
-} */
+.site-photo > .client-site{
+    height: 200px;
+    width: auto;
+    opacity: 1; 
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.site-photo > h3{
+    margin-top: -40px;
+}
+
+.client-site:hover{
+    background-color: rgba(255,255,255, 0.8);
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    transform: translate(0%, -220%);
+}
+
+.site-photo:hover .client-site {
+    opacity: 0.3;
+}
+
+.site-photo:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.text:hover{
+    cursor: pointer;
+    transition: transform .2s;
+    transform: scale(1.1);
+}
