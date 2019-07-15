@@ -1,3 +1,8 @@
+.contact-footer-div{
+    display: flex;
+    flex-direction: column;
+}
+
 footer {
     background-color:#1d2326;
     width: 100%;

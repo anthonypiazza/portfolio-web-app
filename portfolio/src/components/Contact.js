@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import WoodImg from '../imgs/arrow.jpg';
 
 const ContactPage = styled.div`
 height: 500px;
 display: flex;
-background-image: url(${WoodImg});
-background-size: 100%;
-background-position-y: 1900px;
+background-color: #eff0f0;
+padding: 50px 0%;
 `
 
 const FormContainer = styled.div`
@@ -48,7 +46,7 @@ const Button = styled.button`
 function Contact(props){
     return (
     <ContactPage id={props.id}>
-      <div>
+      <div className="contact-footer-div">
         <FormContainer>
             <ContactForm>
             <Input
@@ -83,15 +81,14 @@ function Contact(props){
             <Button>Send Message</Button>
             </ContactForm>
         </FormContainer>
-        <div></div>
-      </div>
-      <div>
-        <div class="copyright">
-          <p>©  2019 All rights reserved</p>
-        </div>  
-        <div class="disclaimers">  
-          <a>Privacy Policy</a>
-          <a>Terms and Conditions</a>
+        <div>
+          <div className="copyright">
+            <p>©  2019 All rights reserved</p>
+          </div>  
+          <div className="disclaimers">  
+            <a href="google.com">Privacy Policy</a>
+            <a href="google.com">Terms and Conditions</a>
+          </div>
         </div>
       </div>
     </ContactPage>

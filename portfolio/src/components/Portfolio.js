@@ -37,7 +37,7 @@ const Portfolio = (props) => {
                     <div className="button-div">
                         <PortfolioButton>
                             <CodeLink className="code-link" href="https://github.com/build-org-chart/React-Frontend-Anthony-Piazza">
-                                <i class="fab fa-github"/>
+                                <i className="fab fa-github"/>
                                 View the Code
                             </CodeLink>
                         </PortfolioButton>
@@ -58,7 +58,7 @@ const Portfolio = (props) => {
                     <div className="button-div">
                         <PortfolioButton>
                             <a className="code-link" href="https://github.com/satoshi-s-law/frontend">
-                                <i class="fab fa-github"/>
+                                <i className="fab fa-github"/>
                                 View the Code
                             </a>
                         </PortfolioButton>
@@ -78,7 +78,7 @@ const Portfolio = (props) => {
                     <div className="button-div">
                         <PortfolioButton>
                             <a className="code-link" href="https://github.com">
-                                <i class="fab fa-github"/>
+                                <i className="fab fa-github"/>
                                 View the Code
                             </a>
                         </PortfolioButton>

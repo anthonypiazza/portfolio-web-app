@@ -1,10 +1,8 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import '../components/css/hero.css';
-import { Link, animateScroll as scroll } from "react-scroll";
-import ProfileImg from '../../src/imgs/Anthony_Piazza.jpg';
+import '../components/css/Hero.css';
+import { Link } from "react-scroll";
 
 const Hero = props => {
     return(

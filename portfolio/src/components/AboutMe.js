@@ -1,16 +1,29 @@
 import React from 'react';
+import styled from "styled-components";
+import WoodImg from '../imgs/flower-grayscale.jpg';
 
 import ProfileImg from '../imgs/Anthony_Piazza.jpg';
 
 import '../components/css/AboutMe.css';
 
+const ContactPage = styled.div`
+  background-image: url(${WoodImg});
+  background-position-y: center;
+  background-size: 20%;
+  background-color: #eff0f0;
+  padding-bottom: 50px;
+  background-repeat: repeat-x;
+  margin-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+`
+
 function AboutMe(props){
   return(
-    <div id={props.id} className="about-me-page">
+    <ContactPage id={props.id} className="about-me-page">
       <section className="team-member-headline">
         <div>
           <h1>About Me</h1>
-          <hr className="profile-hr"/>
+          <hr></hr>
         </div>
       </section>
       <section className="profiles">
@@ -45,7 +58,7 @@ function AboutMe(props){
           </p>
         </div> 
       </section>    
-    </div>              
+    </ContactPage>              
   )
 }
 
