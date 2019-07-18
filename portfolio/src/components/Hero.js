@@ -21,7 +21,7 @@ const Hero = props => {
                         <Link spy={true} smooth={true} offset={-70} duration= {500} className="learn-more" to="section2">Learn More</Link>
                     </div>
                 </div>
-                <div className="second-container">
+                {/* <div className="second-container">
                     <div className="hero-text">
                         <div>
                             <h1 className="second-header">Github Contributions</h1>    
@@ -35,11 +35,11 @@ const Hero = props => {
                         <div className="button-div-2">
                             <Link spy={true} smooth={true} offset={-70} duration= {500} className="learn-more" to="section4">View Education Details</Link>
                         </div>
-                    </div>
+                    </div> */}
                     {/* <div className="hero-image">
                         <img src={ProfileImg} alt="Anthony Piazza"/>
                     </div> */}
-                </div>
+                {/* </div> */}
                 <div className="third-container">
                     <div className="hero-text">
                         <div>
