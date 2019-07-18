@@ -66,3 +66,33 @@
 .team-image > hr{
     margin: 0px 35%;
 }
+
+.resume-modal{
+    display: flex;
+    justify-content: center;
+}
+
+.resume-img{
+    margin-top: 80px;
+    width: 1000px;
+}
+
+.modal-button{
+    padding: 10px 45px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.modal-button:hover{
+    transition: transform .2s;
+    transform: scale(1.1);
+}
+
+.MuiDialog-container > .MuiDialog-paperWidthSm {
+    max-width: 1200px;
+}

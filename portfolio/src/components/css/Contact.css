@@ -1,6 +1,7 @@
 .contact-footer-div{
     display: flex;
     flex-direction: column;
+    width: 60vw;
 }
 
 footer {
@@ -22,7 +23,7 @@ footer {
         
 .copyright > p {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: .8rem;
     text-align: left;
     padding: 0px 15%;
 }
@@ -40,4 +41,12 @@ footer {
     -webkit-text-stroke: 1px white; 
     text-align: right;
     margin-right: 5%;
+}
+
+label{
+    text-align: left;
+}
+
+textarea{
+    height: 150px;
 }
