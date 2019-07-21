@@ -1,68 +1,44 @@
 import React from "react";
-import styled from "styled-components";
 
-import './css/Contact.css';
-import LoginForm from './LoginForm';
+import ContactForm from './ContactForm';
 import MessagePic from '../imgs/email.svg';
 
-const ContactPage = styled.div`
-display: flex;
-background-color: #eff0f0;
-padding: 50px 0% 0px 0%;
-justify-content: center;
-font-family: 'Montserrat', sans-serif;
-flex-direction: column;
-`
+import {
+  ContactPageDiv,
+  PortfolioH1,
+  FormDiv,
+  MessageImg,
+  Footer,
+  CopyrightDiv,
+  FooterP,
+  Disclaimers,
+  FooterLink,
+  SectionHeaderHR,
+  ContactH1
+} from './StyledComponents';
 
-const MessageImg = styled.img`
-  width: 45%;
-  height: auto;
-  margin-top: 50px;
-`
 
-const FormDiv = styled.div`
-display: flex;
-justify-content: center;
-padding-bottom: 30px;
-`
-
-const Footer = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  color: white;
-`
-
-const FooterLink = styled.a`
-  text-decoration: none;
-  color: white;
-  font-size: .7rem;
-`
-
-const FooterP = styled.p`
-  font-size: .7rem;
-`
-
-function Contact(){
+function Contact(props){
   return (
-    <ContactPage>
-      <h1>Get In Touch!</h1> 
+    <ContactPageDiv id={props.id}>
+      <ContactH1>Get In Touch!</ContactH1> 
+      <SectionHeaderHR></SectionHeaderHR>
       <FormDiv>
-        <LoginForm />
+        <ContactForm />
         <div>
           <MessageImg src={MessagePic} alt="Chat Message"/>
         </div>
       </FormDiv>
       <Footer>
-        <div className="copyright">
+        <CopyrightDiv>
           <FooterP>©  2019 All rights reserved</FooterP>
-        </div>  
-        <div className="disclaimers">  
+        </CopyrightDiv>  
+        <Disclaimers>  
           <FooterLink href="google.com">Privacy Policy</FooterLink>
           <FooterLink href="google.com">Terms and Conditions</FooterLink>
-        </div>
+        </Disclaimers>
       </Footer>
-    </ContactPage>
+    </ContactPageDiv>
   );
 }
 

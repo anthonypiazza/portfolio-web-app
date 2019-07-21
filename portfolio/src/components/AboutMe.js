@@ -1,25 +1,27 @@
 import React from 'react';
-import styled from "styled-components";
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 
-import FlowerImg from '../imgs/flower-grayscale.jpg';
 import ResumeImg from '../imgs/resume.png';
 import ProfileImg from '../imgs/Anthony_Piazza.jpg';
-import '../components/css/AboutMe.css';
+import '../App.css';
+import {
+  ContactPage,
+  ProfileSection,
+  ProfileH1,
+  Profile,
+  ProfileImgDiv,
+  ProfileImgTag,
+  ProfileHR,
+  ProfileH3,
+  ProfileInfoDiv,
+  InfoP,
+  ResumeModal,
+  ResumeIModalImg,
+  ModalButton,
+  SectionHeaderHR
 
-
-
-const ContactPage = styled.div`
-  background-image: url(${FlowerImg});
-  background-position-y: center;
-  background-size: 20%;
-  background-color: #eff0f0;
-  padding-bottom: 50px;
-  background-repeat: repeat-x;
-  margin-top: 60px;
-  font-family: 'Montserrat', sans-serif;
-`
+} from './StyledComponents';
 
 function AboutMe(props){
 
@@ -34,59 +36,59 @@ function AboutMe(props){
   };
 
   return(
-    <ContactPage id={props.id} className="about-me-page">
-      <section className="team-member-headline">
+    <ContactPage id={props.id}>
+      <ProfileSection>
         <div>
-          <h1>About Me</h1>
-          <hr></hr>
+          <ProfileH1>About Me</ProfileH1>
+          <SectionHeaderHR></SectionHeaderHR>
         </div>
-      </section>
-      <section className="profiles">
-        <div className="team-image">
-          <img src={ProfileImg} alt="Anthony Piazza" />
+      </ProfileSection>
+      <Profile>
+        <ProfileImgDiv>
+          <ProfileImgTag src={ProfileImg} alt="Anthony Piazza" />
           <h2>Anthony Piazza</h2>          
-          <hr/>
-          <h3>Software Engineer</h3>
+          <ProfileHR/>
+          <ProfileH3>Software Engineer</ProfileH3>
           <p>Dallas, Texas</p>
           <div>
-            <button className="modal-button" type="button" onClick={handleOpen}>View My Resume</button>
+            <ModalButton type="button" onClick={handleOpen}>View My Resume</ModalButton>
             <Dialog
               onClose={handleClose}
               aria-labelledby="customized-dialog-title"
               open={open}
             >
               <DialogContent className="dialog-content">
-                <div onClick={handleClose} className="resume-modal">
-                  <img className="resume-img" src={ResumeImg} alt="My Resume" />
-                </div>
+                <ResumeModal onClick={handleClose} >
+                  <ResumeIModalImg src={ResumeImg} alt="My Resume" />
+                </ResumeModal>
               </DialogContent>
             </Dialog>
           </div>
-        </div>
-        <div className="team-member-info">
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        </ProfileImgDiv>
+        <ProfileInfoDiv>
+          <InfoP>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
           Lorem ipsum Lorem ipsum v v Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
           Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
           Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
           Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          </p>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+          </InfoP>
+          <InfoP>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
           Lorem ipsum Lorem ipsum v v Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
           Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
           Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
           Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          </p>
-          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+          </InfoP>
+          <InfoP>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
           Lorem ipsum Lorem ipsum v v Lorem ipsum Lorem ipsum Lorem ipsum 
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
           Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
           Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
           Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          </p>
-        </div> 
-      </section>    
+          </InfoP>
+        </ProfileInfoDiv> 
+      </Profile>    
     </ContactPage>              
   )
 }

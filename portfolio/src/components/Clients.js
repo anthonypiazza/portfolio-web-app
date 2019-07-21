@@ -1,8 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
-
-import './css/Clients.css';
 
 import HLFpic from '../imgs/hlfplano.png';
 import GCSFSpic from '../imgs/gcsfs.png';
@@ -11,11 +9,29 @@ import TMTpic from '../imgs/teammentaltraining.png';
 import Rollinpic from '../imgs/rollin-cover.png';
 import GCSFSmain from '../imgs/gcsfs-main.png';
 import Rollinmain from '../imgs/rollin.png';
+import '../App.css';
+import {
+  ClientSection,
+  PortfolioH1,
+  SectionHeaderHR,
+  TopRowPhotoGrid,
+  SiteImageDiv,
+  SiteImage,
+  TransitionDiv,
+  ViewSiteButton,
+  ViewSiteButtonLink,
+  SiteH3,
+  BottomRowPhotoGrid,
+  ResumeModal,
+  ResumeIModalImg
+} from './StyledComponents';
 
 
 function Clients(props){
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [openRollin, setOpenRollin] = useState(false);
+
 
   const handleOpen = () => {
     setOpen(true);
@@ -25,7 +41,7 @@ function Clients(props){
     setOpen(false);
   };
 
-  const [openRollin, setOpenRollin] = React.useState(false);
+  
 
   const handleOpenRollin = () => {
     setOpenRollin(true);
@@ -36,73 +52,65 @@ function Clients(props){
   };
 
   return (
-    <div id={props.id} className="client-section">
+    <ClientSection id={props.id}>
       <div>
-        <h1>Freelance Clients</h1>
-        <hr></hr>
+        <PortfolioH1>Freelance Clients</PortfolioH1>
+        <SectionHeaderHR></SectionHeaderHR>
       </div>
-      <div className="photo-grid">
-        <div className="site-photo">
-          <img className="client-site" src={HLFpic} alt="Hamilton Law Firm"/>
-          <div class="middle">
-            <button class="text"><a href="http://hlfplano.com/">View Site</a></button>
-          </div>
-          <h3>Hamilton Law Firm PLLC</h3>
-        </div>
-        <div className="site-photo">
-          <img className="client-site" src={KKSSpic} alt="Killens Enterprise Consulting"/>
-          <div class="middle">
-            <button class="text"><a href="https://www.killensec.com/">View Site</a></button>
-          </div>
-          <h3>Killens Enterprise Consulting LLC.</h3>
-        </div>
-        <div className="site-photo">
-          <img className="client-site" src={TMTpic} alt="Team Mental Training"/>
-          <div class="middle">
-            <button class="text"><a href="https://www.teammentaltraining.com/">View Site</a></button>
-          </div>  
-          <h3>Team Mental Training Online Course</h3>
-        </div>
-      </div>
-      <div className="photo-grid-2">
-        <div className="site-photo">
-          <img className="client-site" src={GCSFSpic} alt="Global Cyber Security Summit"/>
-          <div class="middle">
-            <button class="text" type="button" onClick={handleOpen}>View Site Design</button>
-            <Dialog
-              onClose={handleClose}
-              aria-labelledby="customized-dialog-title"
-              open={open}
-            >
+      <TopRowPhotoGrid>
+        <SiteImageDiv className="site-photo">
+          <SiteImage className="client-site" src={HLFpic} alt="Hamilton Law Firm"/>
+          <TransitionDiv className="middle">
+            <ViewSiteButton><ViewSiteButtonLink href="http://hlfplano.com/">View Site</ViewSiteButtonLink></ViewSiteButton>
+          </TransitionDiv>
+          <SiteH3>Hamilton Law Firm PLLC</SiteH3>
+        </SiteImageDiv>
+        <SiteImageDiv className="site-photo">
+          <SiteImage className="client-site" src={KKSSpic} alt="Killens Enterprise Consulting"/>
+          <TransitionDiv className="middle">
+            <ViewSiteButton><ViewSiteButtonLink href="https://www.killensec.com/">View Site</ViewSiteButtonLink></ViewSiteButton>
+          </TransitionDiv>
+          <SiteH3>Killens Enterprise Consulting LLC.</SiteH3>
+        </SiteImageDiv>
+        <SiteImageDiv className="site-photo">
+          <SiteImage className="client-site" src={TMTpic} alt="Team Mental Training"/>
+          <TransitionDiv className="middle">
+            <ViewSiteButton><ViewSiteButtonLink href="https://www.teammentaltraining.com/">View Site</ViewSiteButtonLink></ViewSiteButton>
+          </TransitionDiv>  
+          <SiteH3>Team Mental Training Online Course</SiteH3>
+        </SiteImageDiv>
+      </TopRowPhotoGrid>
+      <BottomRowPhotoGrid>
+        <SiteImageDiv className="site-photo">
+          <SiteImage className="client-site" src={GCSFSpic} alt="Global Cyber Security Summit"/>
+          <TransitionDiv className="middle">
+            <ViewSiteButton type="button" onClick={handleOpen}>View Site Design</ViewSiteButton>
+            <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
               <DialogContent className="dialog-content">
-                <div onClick={handleClose} className="resume-modal">
-                  <img className="resume-img" src={GCSFSmain} alt="2018 Global CyberSecurity Website Design" />
-                </div>
+                <ResumeModal onClick={handleClose}>
+                  <ResumeIModalImg src={GCSFSmain} alt="2018 Global CyberSecurity Website Design" />
+                </ResumeModal>
               </DialogContent>
             </Dialog>
-          </div>
-          <h3>2018 Global Cybersecurity Summit</h3>
-        </div>
-        <div className="site-photo">
-          <img className="client-site" src={Rollinpic} alt="Rollin Premier"/>
-          <div class="middle">
-          <button class="text" type="button" onClick={handleOpenRollin}>View Site Design</button>
-            <Dialog
-              onClose={handleCloseRollin}
-              aria-labelledby="customized-dialog-title"
-              open={openRollin}
-            >
+          </TransitionDiv>
+          <SiteH3>2018 Global Cybersecurity Summit</SiteH3>
+        </SiteImageDiv>
+        <SiteImageDiv className="site-photo">
+          <SiteImage className="client-site" src={Rollinpic} alt="Rollin Premier"/>
+          <TransitionDiv className="middle">
+            <ViewSiteButton type="button" onClick={handleOpenRollin}>View Site Design</ViewSiteButton>
+            <Dialog onClose={handleCloseRollin} aria-labelledby="customized-dialog-title" open={openRollin}>
               <DialogContent className="dialog-content">
-                <div onClick={handleCloseRollin} className="resume-modal">
-                  <img className="resume-img" src={Rollinmain} alt="Rollin Premier Website Design" />
-                </div>
+                <ResumeModal onClick={handleCloseRollin}>
+                  <ResumeIModalImg src={Rollinmain} alt="Rollin Premier Website Design" />
+                </ResumeModal>
               </DialogContent>
             </Dialog>
-          </div>
-          <h3>Rollin Premier Crypto Trading Group</h3>
-        </div>
-      </div>
-    </div>
+          </TransitionDiv>
+          <SiteH3>Rollin Premier Crypto Trading Group</SiteH3>
+        </SiteImageDiv>
+      </BottomRowPhotoGrid>
+    </ClientSection>
   );
 };
 
