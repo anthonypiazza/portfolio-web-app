@@ -1,39 +1,47 @@
 import React from 'react';
-import '../components/css/Mission.css';
+
+import {
+    SkillSection,
+    SkillIcon,
+    SkillHeadline,
+    SkillName,
+    SkillBoxRow,
+    SkillBox
+} from './StyledComponents';
 
 const Mission = props => {
     return (
-        <section id={props.id} className="problem">
+        <SkillSection id={props.id}>
             <div className="problem-text">
-                <h2>My Developer Skillset and Toolstack Includes...</h2>
+                <SkillHeadline>My Developer Skillset and Toolstack Includes...</SkillHeadline>
             </div>
-            <div className="boxes">
-                <div className="box-div">
-                    <i className="fab fa-react"></i>
-                    <p>ReactJS</p>
-                </div>
-                <div className="box-div">
-                    <i className="fab fa-js"></i>
-                    <p>Javascript</p>
-                </div>
-                <div className="box-div">
-                    <i className="fab fa-css3-alt"></i>
-                    <p>CSS3</p>
-                </div>
-                <div className="box-div">
-                    <i className="fab fa-html5"></i>
-                    <p>HTML5</p>
-                </div>
-                <div className="box-div">
-                    <i className="fab fa-less"></i>
-                    <p>LESS</p>
-                </div>
-                <div className="box-div">
-                    <i className="fab fa-git"></i>
-                    <p>GitFlow</p>
-                </div>
-            </div>
-        </section>        
+            <SkillBoxRow>
+                <SkillBox>
+                    <SkillIcon className="fab fa-react"></SkillIcon>
+                    <SkillName>ReactJS</SkillName>
+                </SkillBox>
+                <SkillBox>
+                    <SkillIcon className="fab fa-js"></SkillIcon>
+                    <SkillName>Javascript</SkillName>
+                </SkillBox>
+                <SkillBox>
+                    <SkillIcon className="fab fa-css3-alt"></SkillIcon>
+                    <SkillName>CSS3</SkillName>
+                </SkillBox>
+                <SkillBox>
+                    <SkillIcon className="fab fa-html5"></SkillIcon>
+                    <SkillName>HTML5</SkillName>
+                </SkillBox>
+                <SkillBox>
+                    <SkillIcon className="fab fa-less"></SkillIcon>
+                    <SkillName>LESS</SkillName>
+                </SkillBox>
+                <SkillBox>
+                    <SkillIcon className="fab fa-git"></SkillIcon>
+                    <SkillName>GitFlow</SkillName>
+                </SkillBox>
+            </SkillBoxRow>
+        </SkillSection>        
     )
 }
 

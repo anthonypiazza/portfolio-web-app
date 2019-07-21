@@ -1,26 +1,54 @@
 import React from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import '../components/css/Hero.css';
-import { Link } from "react-scroll";
+import '../App.css';
+import {
+    HeroSection,
+    SecondSlideText,
+    SlideTitleDiv,
+    FirstSlideTitle,
+    FirstSlideTagline,
+    SlideButtonDiv,
+    SlideButton,
+    SecondSlideTitle,
+    SecondSlideTagline,
+    SecondSlideSubTagline,
+    SlideTwoButtonDiv
+} from './StyledComponents';
 
 const Hero = props => {
     return(
-        <section className="hero-content" id={props.id}>
+        <HeroSection id={props.id}>
             <AwesomeSlider className="slider-div">
                 <div className="hero-width-div">
-                    <div className="hero-text">
-                        <div className="job-occupation">
-                            <h1>Full Stack Web Developer</h1>    
+                    <SlideTitleDiv> 
+                        <div>
+                            <FirstSlideTitle>Full Stack Web Developer</FirstSlideTitle>    
                         </div>
-                        <div className="tagline">
+                        <FirstSlideTagline>
                             <p>Enrolled in the Lambda School Full Stack Web Development Program.</p>
-                        </div>
-                    </div>
-                    <div className="button-div">
-                        <Link spy={true} smooth={true} offset={-70} duration= {500} className="learn-more" to="section2">Learn More</Link>
-                    </div>
+                        </FirstSlideTagline>
+                        <SlideButtonDiv>
+                            <SlideButton spy={true} smooth={true} offset={-70} duration= {500} to="section2">Learn More</SlideButton>
+                        </SlideButtonDiv>
+                    </SlideTitleDiv>
                 </div>
+                <div className="third-container">
+                    <SlideTitleDiv>
+                        <div>
+                            <SecondSlideTitle>San Diego State University Class of 2016</SecondSlideTitle>    
+                        </div>
+                        <SecondSlideTagline>
+                            <SecondSlideSubTagline>Bachelor of Science in Business Administration</SecondSlideSubTagline>
+                            <SecondSlideText>Dean's List - Spring of 2014 and Spring of 2015</SecondSlideText>
+                            <SecondSlideText>Studied at Oxford University during Summer 2015 session (Pacific University Exchange Program)</SecondSlideText>
+                            <SecondSlideText>Sigma Chi Fraternity & Associated Student Leadership</SecondSlideText>
+                        </SecondSlideTagline>
+                        <SlideTwoButtonDiv>
+                            <SlideButton spy={true} smooth={true} offset={-70} duration= {500} to="section4">View Education Details</SlideButton>
+                        </SlideTwoButtonDiv>
+                    </SlideTitleDiv>
+                </div>    
                 {/* <div className="second-container">
                     <div className="hero-text">
                         <div>
@@ -35,32 +63,16 @@ const Hero = props => {
                         <div className="button-div-2">
                             <Link spy={true} smooth={true} offset={-70} duration= {500} className="learn-more" to="section4">View Education Details</Link>
                         </div>
-                    </div> */}
-                    {/* <div className="hero-image">
-                        <img src={ProfileImg} alt="Anthony Piazza"/>
-                    </div> */}
-                {/* </div> */}
-                <div className="third-container">
-                    <div className="hero-text">
-                        <div>
-                            <h1 className="third-header">San Diego State University Class of 2016</h1>    
-                        </div>
-                        <div className="third-tagline">
-                            <p className="degree">Bachelor of Science in Business Administration</p>
-                            <p className="education-details">Dean's List - Spring of 2014 and Spring of 2015</p>
-                            <p className="education-details">Studied at Oxford University during Summer 2015 session (Pacific University Exchange Program)</p>
-                            <p className="education-details">Sigma Chi Fraternity & Associated Student Leadership</p>
-                        </div>
-                        <div className="button-div-3">
-                            <Link spy={true} smooth={true} offset={-70} duration= {500} className="learn-more" to="section4">View Education Details</Link>
-                        </div>
                     </div>
-                    {/* <div className="hero-image">
+                    <div className="hero-image">
                         <img src={ProfileImg} alt="Anthony Piazza"/>
-                    </div> */}
-                </div>
+                    </div>              
+                    <div className="hero-image">
+                        <img src={ProfileImg} alt="Anthony Piazza"/>
+                    </div>
+                </div> */}
             </AwesomeSlider>
-        </section>   
+        </HeroSection>   
     )
 }
 
