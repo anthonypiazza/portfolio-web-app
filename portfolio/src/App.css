@@ -126,3 +126,14 @@
     background-repeat: no-repeat;
   }
 }
+
+i{
+  padding: 0px 10px;
+  font-size: 1.5rem;
+  color: black;
+}
+
+i:hover{
+  transition: transform .2s;
+  transform: scale(1.1);
+}

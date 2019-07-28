@@ -15,9 +15,9 @@ const Nav = () => {
         <NavSection>
             <LeftNav>
                 <NavLinks activeClass="active" to="section1" spy={true} smooth={true} offset={-70} duration={500}>Home</NavLinks>
-                <NavLinks activeClass="active" to="section2" spy={true} smooth={true} offset={-70} duration={500}>Skills</NavLinks>
-                <NavLinks activeClass="active" to="section3" spy={true} smooth={true} offset={-70} duration={500}>Projects</NavLinks>   
-                <NavLinks activeClass="active" to="section4" spy={true} smooth={true} offset={-70} duration={500}>About Me</NavLinks>
+                <NavLinks activeClass="active" to="section2" spy={true} smooth={true} offset={-70} duration={500}>About Me</NavLinks>
+                <NavLinks activeClass="active" to="section3" spy={true} smooth={true} offset={-70} duration={500}>Skills</NavLinks>
+                <NavLinks activeClass="active" to="section4" spy={true} smooth={true} offset={-70} duration={500}>Projects</NavLinks>   
                 <NavLinks activeClass="active" to="section5" spy={true} smooth={true} offset={-70} duration={500}>Clients</NavLinks>
             </LeftNav>
             <MiddleNav>

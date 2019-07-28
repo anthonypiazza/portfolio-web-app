@@ -13,14 +13,15 @@ import {
   ProfileImgDiv,
   ProfileImgTag,
   ProfileHR,
+  SocialLinkDiv,
   ProfileH3,
   ProfileInfoDiv,
   InfoP,
   ResumeModal,
   ResumeIModalImg,
   ModalButton,
-  SectionHeaderHR
-
+  SectionHeaderHR,
+  IconLink
 } from './StyledComponents';
 
 function AboutMe(props){
@@ -48,6 +49,17 @@ function AboutMe(props){
           <ProfileImgTag src={ProfileImg} alt="Anthony Piazza" />
           <h2>Anthony Piazza</h2>          
           <ProfileHR/>
+          <SocialLinkDiv>
+            <a href="https://github.com/anthonypiazza">
+              <i class="fab fa-github-square"/>
+            </a>
+            <a href="https://www.linkedin.com/in/piazzaanthony/">
+              <i class="fab fa-linkedin"/>
+            </a>             
+            <IconLink to="section6" spy={true} smooth={true} offset={-70} duration= {500}>
+              <i class="fas fa-envelope"/>
+            </IconLink> 
+          </SocialLinkDiv>
           <ProfileH3>Software Engineer</ProfileH3>
           <p>Dallas, Texas</p>
           <div>
