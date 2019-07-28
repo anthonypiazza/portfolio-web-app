@@ -40,9 +40,9 @@ function App() {
       className="App">
       <Nav />
       <Hero id="section1" />
-      <Mission id="section2" />
-      <Portfolio id="section3" />
-      <AboutMe id="section4" />
+      <AboutMe id="section2" />
+      <Mission id="section3" />
+      <Portfolio id="section4" />
       <Clients id="section5" />
       <Contact id="section6" />
       {/* <Skills /> */}

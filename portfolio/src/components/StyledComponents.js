@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import FlowerImg from '../imgs/flower-grayscale.jpg';
-import Beach from '../imgs/blacks.jpg';
-import Computer from '../imgs/computer.jpg';
 import { Link } from 'react-scroll';
 import { Form, Field } from 'formik';
 
@@ -71,6 +69,30 @@ export const ProfileHR = styled.hr`
     margin: 0px 35%;
 `
 
+export const SocialLinkDiv = styled.div`
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+`
+
+export const SocialIcon = styled.i`
+    color: black;
+    margin-right: 10px;
+    font-size: 1.2rem;
+`
+
+export const IconLink = styled(Link)`
+    text-decoration: none;
+    color: white;
+    padding: 0px 3.2%;
+    font-size: 1rem;
+    &:hover{
+        transition: transform .2s;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+`
+
 export const ProfileH3 = styled.h3`
     font-size: 1rem;
     font-style: italic;
@@ -127,6 +149,7 @@ export const NavSection = styled.section`
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 500;
     @media (max-width: 1000px){
         flex-direction: column-reverse;
         padding-bottom: 10px;
@@ -397,7 +420,6 @@ export const ProjectThreeImagePic = styled.img`
 //CLIENTS STYLES
 
 export const ClientSection = styled.div`
-    margin-top: 150px;
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
@@ -539,15 +561,21 @@ export const FooterLink = styled.a`
   text-decoration: none;
   color: white;
   font-size: .7rem;
+  text-align: center;
+  padding-left: 2%;
   &:hover {
     -webkit-text-stroke: 1px white; 
     text-align: right;
-    margin-right: 5%;
+  }
+  @media(max-width: 1000px){
+      padding-left: 5%;
   }
 `
 
 export const FooterP = styled.p`
   font-size: .7rem;
+  text-align: left;
+  margin-left: 2%;
 `
 
 export const CopyrightDiv = styled.div`
@@ -744,8 +772,10 @@ export const SecondSlideText = styled.p`
     font-weight: 500;
     margin-top: -10px;
     color: black;
+    text-align: left;
     @media (max-width: 1600px){
         font-size: 1.1rem;
+        text-align: center;
     } 
     @media (max-width: 1000px){
         font-size: .9rem;
@@ -782,9 +812,11 @@ export const SecondSlideSubTagline = styled.p`
     font-size: 2.2rem;
     font-style: italic;
     color: black;
+    text-align: left;
     @media (max-width: 1600px){
         font-size: 1.8rem;
         padding-top: 15px;
+        text-align: center;
     } 
     @media (max-width: 1000px){
         font-size: 1.3rem;

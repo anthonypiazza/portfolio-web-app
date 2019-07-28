@@ -5,7 +5,6 @@ import MessagePic from '../imgs/email.svg';
 
 import {
   ContactPageDiv,
-  PortfolioH1,
   FormDiv,
   MessageImg,
   Footer,
