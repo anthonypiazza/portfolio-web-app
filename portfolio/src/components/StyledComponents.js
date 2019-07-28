@@ -32,6 +32,11 @@ export const Profile = styled.section`
     border: 1px solid black;
     margin: 5px 20% 5px 20%;
     background-color: #eff0f0;
+    box-shadow: 7px 7px 7px 7px rgba(0,0,0,0.5);
+    &:hover{
+        transition: transform 2s;
+        transform: scale(1.05);
+    }
     @media (max-width: 1600px){
         margin: 0px 3%;
     }
@@ -624,7 +629,7 @@ export const FormErrors = styled.p`
 `
 
 export const FormField = styled(Field)`
-    padding: 10px 0%;
+    padding: 10px 0% 10px 2%;
     width: 99%;
     margin: 5px 0% 25px 0%;
     border: none;

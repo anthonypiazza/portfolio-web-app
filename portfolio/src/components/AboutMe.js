@@ -3,7 +3,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 
 import ResumeImg from '../imgs/resume.png';
-import ProfileImg from '../imgs/Anthony_Piazza.jpg';
+import ProfileImg from '../imgs/anthony.PNG';
 import '../App.css';
 import {
   ContactPage,

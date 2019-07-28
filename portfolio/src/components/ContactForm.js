@@ -25,7 +25,6 @@ function ContactForm({ errors, touched, isSubmitting }) {
             {touched.subject && errors.subject && <FormErrors>{errors.subject}</FormErrors>}
             <FormField type="subject" name="subject" />
             <label>MESSAGE:</label>
-            {touched.subject && errors.subject && <FormErrors>{errors.subject}</FormErrors>}
             <TextArea component={() => (
                 <textarea 
                     style={{
