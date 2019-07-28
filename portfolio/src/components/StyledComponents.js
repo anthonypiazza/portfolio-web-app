@@ -32,6 +32,11 @@ export const Profile = styled.section`
     border: 1px solid black;
     margin: 5px 20% 5px 20%;
     background-color: #eff0f0;
+    box-shadow: 7px 7px 7px 7px rgba(0,0,0,0.5);
+    &:hover{
+        transition: transform 2s;
+        transform: scale(1.05);
+    }
     @media (max-width: 1600px){
         margin: 0px 3%;
     }
@@ -466,7 +471,7 @@ export const SiteImageDiv = styled.div`
 
 export const SiteImage = styled.img`
     height: 140px;
-    width: 100%;
+    width: 75%;
     opacity: 1; 
     transition: .5s ease;
     backface-visibility: hidden;
@@ -474,6 +479,21 @@ export const SiteImage = styled.img`
     &:hover{
         background-color: rgba(255,255,255, 0.8);    
         opacity: 0.3;
+    }
+    @media(max-width: 1400px){
+        width: 80%;
+    }    
+    @media(max-width: 1200px){
+        width: 90%;
+    }
+    @media(max-width: 1000px){
+        width: 60%;
+    }
+    @media(max-width: 800px){
+        width: 80%;
+    }
+    @media(max-width: 600px){
+        width: 90%;
     }
 `
 
@@ -518,11 +538,12 @@ export const ViewSiteButtonLink = styled.a`
 
 export const ContactPageDiv = styled.div`
     display: flex;
-    background-color: #eff0f0;
+    background-color: black;
     padding: 50px 0% 0px 0%;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     flex-direction: column;
+    color: white;
     @media (max-width: 1600px){}
     @media (max-width: 1000px){
         padding-top: 10px;
@@ -530,7 +551,7 @@ export const ContactPageDiv = styled.div`
 `
 
 export const ContactH1 = styled.h1`
-    padding-top: 50px;
+    padding-top: 20px;
     font-size: 2rem;
     margin: 0px;
 `
@@ -593,10 +614,14 @@ export const Disclaimers = styled.div`
 
 export const FormStyle = styled(Form)`
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
-    background: slategrey;
     border-radius: 10px;
     padding: 10px 7%;
+    width: 40%;
+    @media(max-width: 800px){
+        width: 90%;
+    }
 `
 
 export const FormErrors = styled.p`
@@ -604,10 +629,17 @@ export const FormErrors = styled.p`
 `
 
 export const FormField = styled(Field)`
-    padding: 10px 90px;
-    margin: 30px 0%;
+    padding: 10px 0% 10px 2%;
+    width: 99%;
+    margin: 5px 0% 25px 0%;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+`
+export const TextArea = styled(Field)`
+    padding: 10px 200px;
+    margin: 5px 0% 25px 0%;
+    border: none;
+    border-radius: 5px;
 `
 
 export const FormSubmitButton = styled.button`

@@ -7,21 +7,34 @@ import {
     FormStyle,
     FormErrors,
     FormField,
-    FormSubmitButton
+    FormSubmitButton,
+    TextArea
 } from './StyledComponents';
 
 function ContactForm({ errors, touched, isSubmitting }) {
     return (
         <FormStyle className="form">
+            <label>FULL NAME:</label>
             {touched.name && errors.name && <FormErrors>{errors.name}</FormErrors>}
-            <FormField placeholder="Name:" type="text" name="name" />
+            <FormField type="text" name="name" />
+            <label>EMAIL:</label>
             {touched.email && errors.email && <FormErrors>{errors.email}</FormErrors>}
             {/* if there is an error, this shows you the errors message. */}
-            <FormField placeholder="Email:" type="email" name="email" />
+            <FormField type="email" name="email" />
+            <label>SUBJECT:</label>
             {touched.subject && errors.subject && <FormErrors>{errors.subject}</FormErrors>}
-            <FormField placeholder="Subject:" type="subject" name="subject" />
-            {touched.subject && errors.subject && <FormErrors>{errors.subject}</FormErrors>}
-            <FormField placeholder="Message:" type="message" name="messsage" />
+            <FormField type="subject" name="subject" />
+            <label>MESSAGE:</label>
+            <TextArea component={() => (
+                <textarea 
+                    style={{
+                        borderRadius: '5px', 
+                        width: '99%', 
+                        height: '100px', 
+                        marginBottom: '25px'
+                    }} 
+                ></textarea>
+            )} />
             <FormSubmitButton type="submit" disabled={isSubmitting}>Submit!</FormSubmitButton>
         </FormStyle>
     );
