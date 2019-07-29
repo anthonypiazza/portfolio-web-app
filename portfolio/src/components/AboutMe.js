@@ -2,7 +2,6 @@ import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 
-import ResumeImg from '../imgs/resume.png';
 import ProfileImg from '../imgs/anthony.PNG';
 import '../App.css';
 import {
@@ -18,7 +17,6 @@ import {
   ProfileInfoDiv,
   InfoP,
   ResumeModal,
-  ResumeIModalImg,
   ModalButton,
   SectionHeaderHR,
   IconLink
@@ -60,7 +58,7 @@ function AboutMe(props){
               <i class="fas fa-envelope"/>
             </IconLink> 
           </SocialLinkDiv>
-          <ProfileH3>Software Engineer</ProfileH3>
+          <ProfileH3>Full Stack Web Developer</ProfileH3>
           <p>Dallas, Texas</p>
           <div>
             <ModalButton type="button" onClick={handleOpen}>View My Resume</ModalButton>
@@ -71,7 +69,7 @@ function AboutMe(props){
             >
               <DialogContent className="dialog-content">
                 <ResumeModal onClick={handleClose} >
-                  <ResumeIModalImg src={ResumeImg} alt="My Resume" />
+                <iframe src="https://resume.creddle.io/embed/7bfx0nakbjd" width="850" height="1100" seamless></iframe>
                 </ResumeModal>
               </DialogContent>
             </Dialog>

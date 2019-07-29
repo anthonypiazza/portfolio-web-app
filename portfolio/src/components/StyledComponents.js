@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import { Form, Field } from 'formik';
 
 //ABOUTME STYLES
+
 export const ContactPage = styled.div`
   background-image: url(${FlowerImg});
   background-position-y: center;
