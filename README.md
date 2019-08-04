@@ -22,7 +22,7 @@ Certain components of the site including the Modal feature was rendered using th
 <br/>
 <br/>
 <br/>
-And lastly, the Scroll-onClick feature was created using the React-Scroll library and passing down a section ID as props to the necessary links
+And lastly, the Scroll-onClick feature was created by using the React-Scroll library while passing down an ID as props to the linked components
 ![Scroll-to-Click](https://i.imgur.com/50hF6SQ.png)
 <br/>
 <br/>
