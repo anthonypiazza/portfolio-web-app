@@ -7,7 +7,7 @@ import {
     MiddleNav,
     MiddleNavText,
     RightNav,
-    ContactButton
+    ContactButton,
 } from './StyledComponents';
 
 const Nav = () => {
@@ -23,7 +23,7 @@ const Nav = () => {
             <MiddleNav>
                 <MiddleNavText>ANTHONY PIAZZA</MiddleNavText>
             </MiddleNav>
-            <RightNav>
+            <RightNav>     
                 <ContactButton to="section6" spy={true} smooth={true} offset={-70} duration= {500}>Contact Me</ContactButton>
             </RightNav>
         </NavSection>    

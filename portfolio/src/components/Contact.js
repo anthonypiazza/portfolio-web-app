@@ -13,7 +13,7 @@ import {
   Disclaimers,
   FooterLink,
   SectionHeaderHR,
-  ContactH1
+  ContactH1,
 } from './StyledComponents';
 
 

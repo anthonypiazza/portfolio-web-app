@@ -38,6 +38,10 @@ export const Profile = styled.section`
     &:hover{
         transition: transform 2s;
         transform: scale(1.05);
+        @media( max-width: 1000px){
+            transition: none;
+            transform: none;
+        }
     }
     @media (max-width: 1600px){
         margin: 0px 3%;
@@ -46,7 +50,9 @@ export const Profile = styled.section`
         flex-direction: column;
         border: none;
         margin: 0px 0%;
-    } 
+        box-shadow: none;
+        border: none;
+    }
 `
 
 export const ProfileImgDiv = styled.div`
@@ -158,14 +164,14 @@ export const NavSection = styled.section`
     position: sticky;
     top: 0;
     z-index: 500;
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         flex-direction: column-reverse;
         padding-bottom: 10px;
     }
 `
 export const LeftNav = styled.nav`
     width: 33%;
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         width: 100%;
     }
 `
@@ -198,7 +204,7 @@ export const NavLinks = styled(Link)`
 
 export const MiddleNav = styled.div`
     width: 33%;
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         width: 100%;
     }
 `
@@ -216,7 +222,7 @@ export const MiddleNavText = styled.h1`
 
 export const RightNav = styled.div`
     width: 33%;
-    @media (max-width: 1000px){
+    @media (max-width: 1200px){
         padding-bottom: 15px;
         width: 100%;
     }
@@ -316,6 +322,10 @@ export const ProjectTextP = styled.p`
     }
     @media (max-width: 1000px){
         font-size: .9rem;
+    }
+    @media (max-width: 600px){
+        font-size: .95rem;
+        margin-top: 20px; 
     }
 `
 
@@ -423,7 +433,7 @@ export const ProjectThreeImagePic = styled.img`
     width: 15%;
     height: auto;
     @media (max-width: 1600px){
-        width: 45%;
+        width: 25%;
     }
 `
 
@@ -436,7 +446,7 @@ export const ClientSection = styled.div`
     background-color: white;
     padding: 50px 0% 80px 0%;
     @media (max-width: 1600px){
-        margin-top: 40px;
+        padding-top: 90px;
     }
     @media (max-width: 1000px){
         padding-bottom: 10px;
@@ -472,6 +482,9 @@ export const SiteImageDiv = styled.div`
         width: 50%;
         padding-bottom: 30px;
     } 
+    @media (max-width: 600px){
+        width: 70%;
+    } 
 `
 
 export const SiteImage = styled.img`
@@ -506,6 +519,9 @@ export const SiteH3 = styled.h3`
     margin-top: -40px;
     @media (max-width: 1000px){
         font-size: 1rem;
+    } 
+    @media (max-width: 600px){
+        font-size: .95rem;
     } 
 `
 
@@ -680,6 +696,9 @@ export const SkillIcon = styled.i`
 export const SkillHeadline = styled.h2`
     font-size: 1.5rem;
     text-align: center;
+    @media(max-width: 600px){
+        font-size:1.2rem;
+    }
 `
 
 export const SkillName = styled.p`
@@ -735,6 +754,19 @@ export const SlideTitleDiv = styled.div`
     @media (max-width: 1600px){
         align-items: center;
         margin-left: 0%;
+    } 
+`
+
+export const SecondSlideTitleDiv = styled.div`
+    margin-left: 10%; 
+    width: 80%;   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (max-width: 1600px){
+        align-items: center;
+        margin-left: 0%;
+        width: 100%;
     } 
 `
 
@@ -795,6 +827,7 @@ export const SlideButton = styled(Link)`
         margin: 15px 30% 10px 30%;
     } 
 `
+
 
 export const SlideButtonDiv = styled.div`
     display: flex;
@@ -862,17 +895,43 @@ export const SecondSlideSubTagline = styled.p`
 
 export const SlideTwoButtonDiv = styled.div`
     display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: -15px;
-    @media (max-width: 1600px){
-        margin-top: 10px;
-    } 
-    @media (max-width: 1000px){
-        font-size: .9rem;
-    } 
+    flex-direction: column;
+    @media(max-width: 1600px){
+        align-items: center;
+    }
 `
 
+export const SlideButtonTwo = styled.a`
+    font-family: 'Montserrat', sans-serif;
+    padding: 16px 70px 16px 70px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid black;    
+    margin: 45px 0px 10px -140px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: flex;
+    justify-items: center;
+    &:hover{
+        transition: transform .2s;
+        transform: scale(1.1);
+    }
+    @media (max-width: 1600px){
+        /* margin: 25px 35% 10px 35%; */
+        font-size: 1.1rem;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 25px;
+        justify-content: center;
+    }
+    @media (max-width: 1000px){
+        font-size: .9rem;
+        /* margin: 15px 30% 10px 30%; */
+    } 
+`
 // .button-div-3 > a{
 //     width: 100%;
 //     margin: 5px 75% 10px 9.5%;
