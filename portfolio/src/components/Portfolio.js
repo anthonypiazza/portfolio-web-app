@@ -105,7 +105,8 @@ const Portfolio = (props) => {
                     <ProjectImagePic src={Streemly} alt="Streemly Logo" />
                 </ProjectImage>
             </ProjectSection>  */}   
-        </PortfolioContainer>    
+        </PortfolioContainer>
+   
     )
 }
 

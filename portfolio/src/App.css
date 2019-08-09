@@ -29,7 +29,7 @@
   background-color: #eff0f0;
 }
 
-.aws-sld {
+#section1 > .aws-sld, .aws-sld--organic-arrows {
   /* margin-left: -115px; */
   --organic-arrow-color: white;
 }
@@ -65,7 +65,7 @@
     width: 100%;
     height: 100%;
     background-position-y: 50px;
-    background-position-x: 99%;
+    background-position-x: 48%;
     background-repeat: no-repeat;
     background-size: 1000px;
     background-position: fixed;
@@ -100,32 +100,54 @@
           rgba(24, 23, 23, 0.521)
       ), */
       /* url('../../imgs/css.jpg'); */
-  background-size: auto;
-  background-image: url('./imgs/blacks.jpg');
+  background-size: 70%;
+  background-color: black;
+  background-image: url('./imgs/flower.jpg');
   width: 100%;
   height: 100%;
-  background-position-y: -2800px;
-  background-position-x: 28%;
+  background-position-y: 50%;
+  background-position-x: -288px;
   background-repeat: no-repeat;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1700px){
   .third-container{
-    /* background:     
-        linear-gradient(
-            rgba(24, 23, 23, 0.521),
-            rgba(24, 23, 23, 0.521)
-        ), */
-        /* url('../../imgs/css.jpg'); */
-    background-size: auto;
-    background-image: url('./imgs/blacks.jpg');
+/* background:     
+    linear-gradient(
+        rgba(24, 23, 23, 0.521),
+        rgba(24, 23, 23, 0.521)
+    ), */
+    /* url('../../imgs/css.jpg'); */
+    background-size: 70%;
+    background-color: black;
+    background-image: url('./imgs/flower.jpg');
     width: 100%;
     height: 100%;
-    background-position-y: -2800px;
-    background-position-x: 45%;
+    background-position-y: 50%;
+    background-position-x: -288px;
     background-repeat: no-repeat;
   }
 }
+
+@media (max-width: 1600px){
+  .third-container{
+/* background:     
+    linear-gradient(
+        rgba(24, 23, 23, 0.521),
+        rgba(24, 23, 23, 0.521)
+    ), */
+    /* url('../../imgs/css.jpg'); */
+    background-size: 70%;
+    background-color: black;
+    background-image: url('./imgs/flower.jpg');
+    width: 100%;
+    height: 100%;
+    background-position-y: 30%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
 
 i{
   padding: 0px 10px;

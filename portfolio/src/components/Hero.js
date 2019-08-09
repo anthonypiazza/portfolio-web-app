@@ -4,16 +4,20 @@ import 'react-awesome-slider/dist/styles.css';
 import '../App.css';
 import {
     HeroSection,
-    SecondSlideText,
+    // SecondSlideText,
     SlideTitleDiv,
     FirstSlideTitle,
     FirstSlideTagline,
     SlideButtonDiv,
     SlideButton,
-    SecondSlideTitle,
-    SecondSlideTagline,
-    SecondSlideSubTagline,
-    SlideTwoButtonDiv
+    // SecondSlideTitle,
+    // SecondSlideTagline,
+    // SecondSlideSubTagline,
+    SlideTwoButtonDiv,
+    // CodeLink,
+    LinkIcon,
+    SecondSlideTitleDiv,
+    SlideButtonTwo
 } from './StyledComponents';
 
 const Hero = props => {
@@ -34,20 +38,20 @@ const Hero = props => {
                     </SlideTitleDiv>
                 </div>
                 <div className="third-container">
-                    <SlideTitleDiv>
+                    <SecondSlideTitleDiv>
                         <div>
-                            <SecondSlideTitle>San Diego State University Class of 2016</SecondSlideTitle>    
+                            <FirstSlideTitle>Coded from Scratch</FirstSlideTitle>    
                         </div>
-                        <SecondSlideTagline>
-                            <SecondSlideSubTagline>Bachelor of Science in Business Administration</SecondSlideSubTagline>
-                            <SecondSlideText>Dean's List - Spring of 2014 and Spring of 2015</SecondSlideText>
-                            <SecondSlideText>Studied at Oxford University during Summer 2015 session (Pacific University Exchange Program)</SecondSlideText>
-                            <SecondSlideText>Sigma Chi Fraternity & Associated Student Leadership</SecondSlideText>
-                        </SecondSlideTagline>
+                        <FirstSlideTagline>
+                            <p>Click the button below to view the full source code for this site!</p>
+                        </FirstSlideTagline>
                         <SlideTwoButtonDiv>
-                            <SlideButton spy={true} smooth={true} offset={-70} duration= {500} to="section2">View Education Details</SlideButton>
+                            <SlideButtonTwo href="https://github.com/anthonypiazza/portfolio-web-app">
+                                    <LinkIcon style={{ fontSize: "1.5rem" }}className="fab fa-github"/>
+                                    View the Code
+                            </SlideButtonTwo>
                         </SlideTwoButtonDiv>
-                    </SlideTitleDiv>
+                    </SecondSlideTitleDiv>
                 </div>    
                 {/* <div className="second-container">
                     <div className="hero-text">

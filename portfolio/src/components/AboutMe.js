@@ -88,7 +88,7 @@ function AboutMe(props){
           eventually led me to seek further education to grow and expand my skillset 
           in this area.</InfoP>
         </ProfileInfoDiv> 
-      </Profile>    
+      </Profile>     
     </ContactPage>              
   )
 }
