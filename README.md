@@ -10,7 +10,7 @@ The site was primarily styled with the `Styled-Components` library
 <br/>
 <br/>
 <br/>
-The Hero Slider was import from the React-Awesome-Slider category and adapted with relevant information
+The Hero Slider was imported from the React-Awesome-Slider library and adapted with relevant information
 ![Awesome Slider](https://i.imgur.com/ym41Y0l.png)
 <br/>
 <br/>
