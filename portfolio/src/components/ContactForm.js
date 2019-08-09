@@ -13,7 +13,7 @@ import {
 
 function ContactForm({ errors, touched, isSubmitting }) {
     return (
-        <FormStyle className="form">
+        <FormStyle action="mailto:apiazza5454@yahoo.com" className="form">
             <label>FULL NAME:</label>
             {touched.name && errors.name && <FormErrors>{errors.name}</FormErrors>}
             <FormField type="text" name="name" />
@@ -35,7 +35,7 @@ function ContactForm({ errors, touched, isSubmitting }) {
                     }} 
                 ></textarea>
             )} />
-            <FormSubmitButton type="submit" disabled={isSubmitting}>Submit!</FormSubmitButton>
+            <FormSubmitButton type="submit" disabled={isSubmitting}>BACKEND IS UNDER CONSTRUCTION CHECK BACK SOON</FormSubmitButton>
         </FormStyle>
     );
 }

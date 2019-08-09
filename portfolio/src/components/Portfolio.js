@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Streemly from '../imgs/streemly.jpg';
+// import Streemly from '../imgs/streemly.jpg';
 import SatoshiPic from '../imgs/satoshis-law.png'
-import LambdaFit from '../imgs/LambdaFit.png'
+import Airlytics from '../imgs/airlyticsicon.png'
 
 import {
     PortfolioContainer,
@@ -16,8 +16,8 @@ import {
     PortfolioButton,
     CodeLink,
     LinkIcon,
-    ProjectImage,
-    ProjectImagePic,
+    // ProjectImage,
+    // ProjectImagePic,
     ProjectTwoSection,
     ProjectTwoImage,
     ProjectTwoImagePic,
@@ -28,8 +28,63 @@ import {
 const Portfolio = (props) => {
     return (
         <PortfolioContainer id={props.id}>
-            <PortfolioH1>Web Application Porfolio</PortfolioH1>
+            <PortfolioH1>Personal Projects</PortfolioH1>
             <SectionHeaderHR></SectionHeaderHR>
+            <ProjectSection>
+                <ProjectText>
+                    <ProjectTextH2>Airlytics</ProjectTextH2>
+                    <ProjectTextP>o An AirBnB analytics tool to optimize hosts' rates of return in Berlin</ProjectTextP>
+                    <ProjectTextP>o Collaborated with 10 team members to create the application in a 1 week sprint </ProjectTextP>
+                    <ProjectTextP>o Added client login authentication using Axios with localStorage to enable session persistence</ProjectTextP>
+                    <ProjectTextP>o Successfully connected to Java back-end endpoints using token for Header Authorization</ProjectTextP>
+                    <ProjectTextP>o Built add, update, and delete listing functionality for users via Redux-Thunk and Axios calls</ProjectTextP>
+                    <ProjectTextP>o Implemented useState/useEffect React Hooks for local form state and async data rendering</ProjectTextP>
+                    <ProjectTextP>o Utilized: ReactJS | Hooks | Redux | Redux-Thunk | Axios | Styled-Components | Git | Figma</ProjectTextP> 
+                    <ProjectLinkDiv>
+                        <PortfolioButton>
+                            <CodeLink href="https://github.com/airbnb-price-opt/front-end">
+                                <LinkIcon className="fab fa-github"/>
+                                View the Code
+                            </CodeLink>
+                        </PortfolioButton>
+                        <PortfolioButton>
+                            <CodeLink href="https://airlytics.netlify.com/">Official Website</CodeLink>
+                        </PortfolioButton>
+                    </ProjectLinkDiv>
+                </ProjectText>
+                <ProjectThreeImage>
+                    <ProjectThreeImagePic src={Airlytics} alt="Airlytics logo" />
+                </ProjectThreeImage>
+
+
+            </ProjectSection>
+            <ProjectTwoSection>
+                <ProjectText>
+                    <ProjectTextH2>Satoshi's Law</ProjectTextH2>
+                    <ProjectTextP>o A tool for freelancers to track billable hours, send invoices to clients, and receive payment via Bitcoin</ProjectTextP>
+                    <ProjectTextP>o Collaborated with 6 team members to create the application in a 48-hour Hackathon </ProjectTextP>
+                    <ProjectTextP>o Oversaw the creation of multiple UI views, configured according to design specifications</ProjectTextP>
+                    <ProjectTextP>o Incorporated Styled-Components and Material-UI to mirror Figma wireframe design files</ProjectTextP>
+                    <ProjectTextP>o Awarded Best Mobile UI in Lambda School's 2nd Annual Summer Hackathon out of 12 finalists</ProjectTextP>
+                    <ProjectTextP>o Utilized: ReactJS | Styled-Components | Material-UI | React-Router | PropTypes | Git | Figma </ProjectTextP>
+                    <ProjectLinkDiv>
+                        <PortfolioButton>
+                            <CodeLink href="https://github.com/satoshi-s-law/frontend">
+                                <LinkIcon className="fab fa-github"/>
+                                View the Code
+                            </CodeLink>
+                        </PortfolioButton>
+                        <PortfolioButton>
+                            <CodeLink href="https://www.youtube.com/watch?v=0JfRVZaGeSQ">Official Demo</CodeLink>
+                        </PortfolioButton>
+                    </ProjectLinkDiv>
+                </ProjectText>
+
+                <ProjectTwoImage>
+                    <ProjectTwoImagePic src={SatoshiPic} alt="Satoshi's Law" />
+                </ProjectTwoImage>
+            </ProjectTwoSection>
+{/* 
             <ProjectSection>
                 <ProjectText>
                     <ProjectTextH2>Streemly Organizational Chart</ProjectTextH2>
@@ -45,53 +100,11 @@ const Portfolio = (props) => {
                             <CodeLink href="https://sharp-babbage-c8d5b5.netlify.com/">Official Website</CodeLink>
                         </PortfolioButton>
                     </ProjectLinkDiv>
-                </ProjectText>
-
+                </ProjectText>                
                 <ProjectImage>
                     <ProjectImagePic src={Streemly} alt="Streemly Logo" />
                 </ProjectImage>
-            </ProjectSection>
-            <ProjectTwoSection>
-                <ProjectText>
-                    <ProjectTextH2>Satoshi's Law</ProjectTextH2>
-                    <ProjectTextP>Satoshi's Law is an application that tracks a user’s billable hours and allows for payments to be settled via the Bitcoin Lightning Network.</ProjectTextP> 
-                    <ProjectLinkDiv>
-                        <PortfolioButton>
-                            <CodeLink href="https://github.com/satoshi-s-law/frontend">
-                                <LinkIcon className="fab fa-github"/>
-                                View the Code
-                            </CodeLink>
-                        </PortfolioButton>
-                        <PortfolioButton>Official Website</PortfolioButton>
-                    </ProjectLinkDiv>
-                </ProjectText>
-
-                <ProjectTwoImage>
-                    <ProjectTwoImagePic src={SatoshiPic} alt="Satoshi's Law" />
-                </ProjectTwoImage>
-            </ProjectTwoSection>
-
-            <ProjectSection>
-                <ProjectText>
-                    <ProjectTextH2>Product</ProjectTextH2>
-                    <ProjectTextP>We have concentrated our research efforts around making quick iterations of how to provide a rich UX/UI for gym aficionados.</ProjectTextP> 
-                    <ProjectLinkDiv>
-                        <PortfolioButton>
-                            <CodeLink href="https://github.com">
-                                <LinkIcon className="fab fa-github"/>
-                                View the Code
-                            </CodeLink>
-                        </PortfolioButton>
-                        <PortfolioButton>
-                            <CodeLink href="https://infallible-brattain-b0f591.netlify.com/index.html">Official Website</CodeLink>
-                        </PortfolioButton>
-                    </ProjectLinkDiv>
-                </ProjectText>
-
-                <ProjectThreeImage>
-                    <ProjectThreeImagePic src={LambdaFit} alt="Lambda Fit logo" />
-                </ProjectThreeImage>
-            </ProjectSection>    
+            </ProjectSection>  */}   
         </PortfolioContainer>    
     )
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {ReduxLogo} from '../imgs/redux (1).svg';
 
 import {
     SkillSection,
@@ -21,10 +20,6 @@ const Mission = props => {
                 <SkillBox>
                     <SkillIcon className="fab fa-react"></SkillIcon>
                     <SkillName>ReactJS</SkillName>
-                </SkillBox>
-                <SkillBox>
-                    <img src={ReduxLogo} alt="Redux Logo" />
-                    <SkillName>Redux</SkillName>
                 </SkillBox>
                 <SkillBox>
                     <SkillIcon className="fab fa-js"></SkillIcon>

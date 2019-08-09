@@ -20,9 +20,10 @@ export const ProfileSection = styled.section`
     text-align: center;
     padding-top: 10px;
 `
-export const ProfileH1 = styled.section`
-    font-size: 2rem;
-    margin: 0px 0%;
+export const ProfileH1 = styled.h1`
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    font-size:2rem;
 `
 
 export const Profile = styled.section`
@@ -114,6 +115,7 @@ export const InfoP = styled.p`
     text-align: left;
     padding-bottom: 10px;
     font-size: 1rem;
+    line-height: 2;
 `
 
 export const ResumeModal = styled.div`
@@ -295,6 +297,7 @@ export const ProjectTextH2 = styled.h2`
     font-weight: bolder;
     text-align: left;
     padding: 0px 10%;
+    margin-bottom: 18px;
     @media (max-width: 1000px){
         font-size: 1.3rem;
         text-align: center;
@@ -302,10 +305,10 @@ export const ProjectTextH2 = styled.h2`
 `
 
 export const ProjectTextP = styled.p`
-    margin-top: 18px;
+    margin: 5px 0%;
     line-height: 1.45;
     padding: 0px 10%;
-    font-size: 1.3rem;
+    font-size: .9rem;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
     @media (max-width: 1600px){
@@ -320,6 +323,7 @@ export const ProjectLinkDiv = styled.div`
     display: flex;
     justify-content: flex-start;
     padding-left: 10%;
+    padding-top: 30px; 
     width: 90%;
     @media (max-width: 1000px){
         justify-content: center;
@@ -354,7 +358,7 @@ export const CodeLink = styled.a`
 
 export const ProjectImage = styled.div`
     width: 50%;
-    background-color: #da6351;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -405,7 +409,7 @@ export const ProjectTwoImagePic = styled.img`
 
 export const ProjectThreeImage = styled.div`
     width: 50%;
-    background-color: #bb1333;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -416,7 +420,7 @@ export const ProjectThreeImage = styled.div`
 `
 
 export const ProjectThreeImagePic = styled.img`
-    width: 35%;
+    width: 15%;
     height: auto;
     @media (max-width: 1600px){
         width: 45%;
@@ -554,7 +558,7 @@ export const ContactPageDiv = styled.div`
 export const ContactH1 = styled.h1`
     padding-top: 20px;
     font-size: 2rem;
-    margin: 0px;
+    margin: 0px 0%;
 `
 
 export const MessageImg = styled.img`
@@ -601,7 +605,7 @@ export const FooterP = styled.p`
 `
 
 export const CopyrightDiv = styled.div`
-   width: 50%
+   width: 50%;
 `
 
 export const Disclaimers = styled.div`
@@ -662,7 +666,7 @@ export const FormSubmitButton = styled.button`
 
 export const SkillSection = styled.section`
     background: #eff0f0;
-    margin-top: 110px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     padding-bottom: 83px;
