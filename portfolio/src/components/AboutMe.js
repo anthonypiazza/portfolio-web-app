@@ -2,7 +2,6 @@ import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 
-import ResumeImg from '../imgs/resume.png';
 import ProfileImg from '../imgs/anthony.PNG';
 import '../App.css';
 import {
@@ -18,7 +17,6 @@ import {
   ProfileInfoDiv,
   InfoP,
   ResumeModal,
-  ResumeIModalImg,
   ModalButton,
   SectionHeaderHR,
   IconLink
@@ -51,16 +49,16 @@ function AboutMe(props){
           <ProfileHR/>
           <SocialLinkDiv>
             <a href="https://github.com/anthonypiazza">
-              <i class="fab fa-github-square"/>
+              <i className="fab fa-github-square"/>
             </a>
             <a href="https://www.linkedin.com/in/piazzaanthony/">
-              <i class="fab fa-linkedin"/>
+              <i className="fab fa-linkedin"/>
             </a>             
             <IconLink to="section6" spy={true} smooth={true} offset={-70} duration= {500}>
-              <i class="fas fa-envelope"/>
+              <i className="fas fa-envelope"/>
             </IconLink> 
           </SocialLinkDiv>
-          <ProfileH3>Software Engineer</ProfileH3>
+          <ProfileH3>Front End Web Developer</ProfileH3>
           <p>Dallas, Texas</p>
           <div>
             <ModalButton type="button" onClick={handleOpen}>View My Resume</ModalButton>
@@ -71,34 +69,24 @@ function AboutMe(props){
             >
               <DialogContent className="dialog-content">
                 <ResumeModal onClick={handleClose} >
-                  <ResumeIModalImg src={ResumeImg} alt="My Resume" />
+                <iframe title="Anthony Resume" src="https://resume.creddle.io/embed/7bfx0nakbjd" width="850" height="1100" seamless></iframe>
                 </ResumeModal>
               </DialogContent>
             </Dialog>
           </div>
         </ProfileImgDiv>
         <ProfileInfoDiv>
-          <InfoP>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsum v v Lorem ipsum Lorem ipsum Lorem ipsum 
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          </InfoP>
-          <InfoP>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsum v v Lorem ipsum Lorem ipsum Lorem ipsum 
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          </InfoP>
-          <InfoP>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsum v v Lorem ipsum Lorem ipsum Lorem ipsum 
-          Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-          Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-          </InfoP>
+          <InfoP>I am a Front End Web Developer (React-focused) with a knack for 
+          solving problems and creating innovative web solutions.</InfoP>
+          <InfoP>I am grateful for the chance to have studied Full Stack Web 
+          Development with some of the best web development instructors in the 
+          world at Lambda School.</InfoP>
+          <InfoP>Before transitioning into software development, I enjoyed working 
+          in and around the tech field, first as a cryptocurrency financial analyst, 
+          and later as a technical assistant at a cyber security firm. Along the way 
+          I designed and implemented multiple websites for local businesses which 
+          eventually led me to seek further education to grow and expand my skillset 
+          in this area.</InfoP>
         </ProfileInfoDiv> 
       </Profile>    
     </ContactPage>              

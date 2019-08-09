@@ -45,7 +45,7 @@ const Hero = props => {
                             <SecondSlideText>Sigma Chi Fraternity & Associated Student Leadership</SecondSlideText>
                         </SecondSlideTagline>
                         <SlideTwoButtonDiv>
-                            <SlideButton spy={true} smooth={true} offset={-70} duration= {500} to="section4">View Education Details</SlideButton>
+                            <SlideButton spy={true} smooth={true} offset={-70} duration= {500} to="section2">View Education Details</SlideButton>
                         </SlideTwoButtonDiv>
                     </SlideTitleDiv>
                 </div>    

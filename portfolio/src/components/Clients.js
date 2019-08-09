@@ -54,7 +54,7 @@ function Clients(props){
   return (
     <ClientSection id={props.id}>
       <div>
-        <PortfolioH1>Freelance Clients</PortfolioH1>
+        <PortfolioH1>Professional Projects</PortfolioH1>
         <SectionHeaderHR></SectionHeaderHR>
       </div>
       <TopRowPhotoGrid>
