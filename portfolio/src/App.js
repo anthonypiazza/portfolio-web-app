@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import Mission from './components/Mission';
 import Portfolio from './components/Portfolio';
 import AboutMe from './components/AboutMe';
-import Clients from './components/Clients';
+// import Clients from './components/Clients';
 import Contact from './components/Contact';
 // document.onmousemove = animateCircle;
 
@@ -43,7 +43,7 @@ function App() {
       <AboutMe id="section2" />
       <Mission id="section3" />
       <Portfolio id="section4" />
-      <Clients id="section5" />
+      {/* <Clients id="section5" /> */}
       <Contact id="section6" />
       {/* <Skills /> */}
     </div>

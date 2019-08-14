@@ -1,81 +1,50 @@
 import React from 'react';
-import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
+import Git from '../imgs/gitactivity.svg';
 import '../App.css';
 import {
     HeroSection,
-    // SecondSlideText,
     SlideTitleDiv,
     FirstSlideTitle,
     FirstSlideTagline,
-    SlideButtonDiv,
-    SlideButton,
-    // SecondSlideTitle,
-    // SecondSlideTagline,
-    // SecondSlideSubTagline,
-    SlideTwoButtonDiv,
-    // CodeLink,
-    LinkIcon,
-    SecondSlideTitleDiv,
-    SlideButtonTwo
+    FirstSlideTaglineText,
+    HeroImage,
+    TitleDiv,
+    VerticalAlign,
+    SocialTagHero,
+    RowDiv,
+    SocialTagLink
 } from './StyledComponents';
 
 const Hero = props => {
     return(
         <HeroSection id={props.id}>
-            <AwesomeSlider className="slider-div">
-                <div className="hero-width-div">
-                    <SlideTitleDiv> 
-                        <div>
-                            <FirstSlideTitle>Full Stack Web Developer</FirstSlideTitle>    
-                        </div>
-                        <FirstSlideTagline>
-                            <p>Enrolled in the Lambda School Full Stack Web Development Program.</p>
-                        </FirstSlideTagline>
-                        <SlideButtonDiv>
-                            <SlideButton spy={true} smooth={true} offset={-70} duration= {500} to="section2">Learn More</SlideButton>
-                        </SlideButtonDiv>
-                    </SlideTitleDiv>
+            <SlideTitleDiv> 
+                <VerticalAlign>
+                    <TitleDiv>
+                        <FirstSlideTitle>Anthony Piazza</FirstSlideTitle>    
+                    </TitleDiv>
+                    <FirstSlideTagline>
+                        <FirstSlideTaglineText><i style={{color: "white"}} className="fas fa-code"></i>Web Developer</FirstSlideTaglineText>
+                        <FirstSlideTaglineText><i style={{color: "white"}} className="fab fa-bitcoin" />Crypto Enthusiast</FirstSlideTaglineText>
+                        <FirstSlideTaglineText><i style={{color: "white"}} className="fas fa-headphones"/>Music Lover</FirstSlideTaglineText>
+                        <RowDiv>
+                            <SocialTagHero href="https://github.com/anthonypiazza">
+                                <i style={{ color: "white" }} className="fab fa-github-square"/>
+                            </SocialTagHero>
+                            <SocialTagHero href="https://www.linkedin.com/in/piazzaanthony/">
+                                <i style={{ color: "white" }} className="fab fa-linkedin"/>
+                            </SocialTagHero>             
+                            <SocialTagLink to="section6" spy={true} smooth={true} offset={-70} duration= {500}>
+                                <i style={{ color: "white" }} className="fas fa-envelope"/>
+                            </SocialTagLink>
+                        </RowDiv>
+                    </FirstSlideTagline>            
+                </VerticalAlign>
+                <div>
+                    <HeroImage src={Git} alt="GitHub Activity Chart"/>
                 </div>
-                <div className="third-container">
-                    <SecondSlideTitleDiv>
-                        <div>
-                            <FirstSlideTitle>Coded from Scratch</FirstSlideTitle>    
-                        </div>
-                        <FirstSlideTagline>
-                            <p>Click the button below to view the full source code for this site!</p>
-                        </FirstSlideTagline>
-                        <SlideTwoButtonDiv>
-                            <SlideButtonTwo href="https://github.com/anthonypiazza/portfolio-web-app">
-                                    <LinkIcon style={{ fontSize: "1.5rem" }}className="fab fa-github"/>
-                                    View the Code
-                            </SlideButtonTwo>
-                        </SlideTwoButtonDiv>
-                    </SecondSlideTitleDiv>
-                </div>    
-                {/* <div className="second-container">
-                    <div className="hero-text">
-                        <div>
-                            <h1 className="second-header">Github Contributions</h1>    
-                        </div>
-                        <div className="second-tagline">
-                            <p className="degree"></p>
-                            <p className="education-details"></p>
-                            <p className="education-details"></p>
-                            <p className="education-details"></p>
-                        </div>
-                        <div className="button-div-2">
-                            <Link spy={true} smooth={true} offset={-70} duration= {500} className="learn-more" to="section4">View Education Details</Link>
-                        </div>
-                    </div>
-                    <div className="hero-image">
-                        <img src={ProfileImg} alt="Anthony Piazza"/>
-                    </div>              
-                    <div className="hero-image">
-                        <img src={ProfileImg} alt="Anthony Piazza"/>
-                    </div>
-                </div> */}
-            </AwesomeSlider>
+            </SlideTitleDiv>
+
         </HeroSection>   
     )
 }

@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
 
 // import Streemly from '../imgs/streemly.jpg';
-import SatoshiPic from '../imgs/satoshis-law.png'
-import Airlytics from '../imgs/airlyticsicon.png'
+import SatoshiPic from '../imgs/satoshis-law.png';
+import Airlytics from '../imgs/airlyticsicon.png';
+// import SatoshiGif from '../imgs/satoshi-law-demo.gif';
+// import AirlyticsGif from '../imgs/airlytics-demo.gif';
+import HLFpic from '../imgs/hlfplano.png';
+import GCSFSpic from '../imgs/gcsfs.png';
+import KKSSpic from '../imgs/kkss.png';
+import TMTpic from '../imgs/teammentaltraining.png';
+import Rollinpic from '../imgs/rollin-cover.png';
+import GCSFSmain from '../imgs/gcsfs-main.png';
+import Rollinmain from '../imgs/rollin.png';
+import '../App.css';
+
 
 import {
     PortfolioContainer,
     PortfolioH1,
-    SectionHeaderHR,
-    ProjectSection,
+    // SectionHeaderHR,
+    // ProjectSection,
     ProjectText,
     ProjectTextH2,
     ProjectTextP,
@@ -18,93 +31,199 @@ import {
     LinkIcon,
     // ProjectImage,
     // ProjectImagePic,
-    ProjectTwoSection,
+    // ProjectTwoSection,
     ProjectTwoImage,
     ProjectTwoImagePic,
     ProjectThreeImage,
-    ProjectThreeImagePic
+    ProjectThreeImagePic,
+    ProjectBox,
+    HorizontalFlex,
+    HorizontalFlexBoxes,
+    PortfolioBoxFilterButton,
+    ResumeModal,
+    ResumeIModalImg
 } from './StyledComponents';
 
 const Portfolio = (props) => {
+
+    const [open, setOpen] = useState(false);
+    const [openRollin, setOpenRollin] = useState(false);
+
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    
+
+    const handleOpenRollin = () => {
+        setOpenRollin(true);
+    };
+
+    const handleCloseRollin = () => {
+        setOpenRollin(false);
+    };
+
+
     return (
         <PortfolioContainer id={props.id}>
-            <PortfolioH1>Personal Projects</PortfolioH1>
-            <SectionHeaderHR></SectionHeaderHR>
-            <ProjectSection>
-                <ProjectText>
-                    <ProjectTextH2>Airlytics</ProjectTextH2>
-                    <ProjectTextP>o An AirBnB analytics tool to optimize hosts' rates of return in Berlin</ProjectTextP>
-                    <ProjectTextP>o Collaborated with 10 team members to create the application in a 1 week sprint </ProjectTextP>
-                    <ProjectTextP>o Added client login authentication using Axios with localStorage to enable session persistence</ProjectTextP>
-                    <ProjectTextP>o Successfully connected to Java back-end endpoints using token for Header Authorization</ProjectTextP>
-                    <ProjectTextP>o Built add, update, and delete listing functionality for users via Redux-Thunk and Axios calls</ProjectTextP>
-                    <ProjectTextP>o Implemented useState/useEffect React Hooks for local form state and async data rendering</ProjectTextP>
-                    <ProjectTextP>o Utilized: ReactJS | Hooks | Redux | Redux-Thunk | Axios | Styled-Components | Git | Figma</ProjectTextP> 
-                    <ProjectLinkDiv>
-                        <PortfolioButton>
-                            <CodeLink href="https://github.com/airbnb-price-opt/front-end">
-                                <LinkIcon className="fab fa-github"/>
-                                View the Code
-                            </CodeLink>
-                        </PortfolioButton>
-                        <PortfolioButton>
-                            <CodeLink href="https://airlytics.netlify.com/">Official Website</CodeLink>
-                        </PortfolioButton>
-                    </ProjectLinkDiv>
-                </ProjectText>
-                <ProjectThreeImage>
-                    <ProjectThreeImagePic src={Airlytics} alt="Airlytics logo" />
-                </ProjectThreeImage>
+            <PortfolioH1 style={{ marginBottom: "10px"}}>Projects</PortfolioH1>
+            <HorizontalFlex>
+                <PortfolioBoxFilterButton>All</PortfolioBoxFilterButton>
+                <PortfolioBoxFilterButton>Designed</PortfolioBoxFilterButton>
+                <PortfolioBoxFilterButton>Coded</PortfolioBoxFilterButton>
+            </HorizontalFlex>
+            <HorizontalFlexBoxes>
+                <ProjectBox>
+                    <ProjectThreeImage>
+                        <ProjectThreeImagePic src={Airlytics} alt="Airlytics Logo" />
+                    </ProjectThreeImage>
+                    <ProjectText>
+                        <ProjectTextH2>Airlytics</ProjectTextH2>
+                        <ProjectTextP>An AirBnB analytics tool to optimize hosts' rates of return in Berlin</ProjectTextP>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>
+                            <ProjectThreeImagePic style={{width: '90%'}} src={AirlyticsGif} alt="Airlytics Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectTextP>React  |  Redux  |  Git  |  Figma</ProjectTextP> 
+                        <ProjectLinkDiv>
+                            <PortfolioButton>
+                                <CodeLink href="https://github.com/airbnb-price-opt/front-end">
+                                    <LinkIcon className="fab fa-github"/>
+                                    View the Code
+                                </CodeLink>
+                            </PortfolioButton>
+                            <PortfolioButton>
+                                <CodeLink href="https://airlytics.netlify.com/">Official Website</CodeLink>
+                            </PortfolioButton>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
 
+                <ProjectBox>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic src={SatoshiPic} alt="Satoshi's Law" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>Satoshi's Law</ProjectTextH2>
+                        <ProjectTextP>Freelance tool to track hours, send invoices, and receive Bitcoin payments</ProjectTextP>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectTextP>React  |  Material-UI  |  Git  |  Figma </ProjectTextP>
+                        <ProjectLinkDiv>
+                            <PortfolioButton>
+                                <CodeLink href="https://github.com/satoshi-s-law/frontend">
+                                    <LinkIcon className="fab fa-github"/>
+                                    View the Code
+                                </CodeLink>
+                            </PortfolioButton>
+                            <PortfolioButton>
+                                <CodeLink href="https://www.youtube.com/watch?v=0JfRVZaGeSQ">Official Demo</CodeLink>
+                            </PortfolioButton>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
 
-            </ProjectSection>
-            <ProjectTwoSection>
-                <ProjectText>
-                    <ProjectTextH2>Satoshi's Law</ProjectTextH2>
-                    <ProjectTextP>o A tool for freelancers to track billable hours, send invoices to clients, and receive payment via Bitcoin</ProjectTextP>
-                    <ProjectTextP>o Collaborated with 6 team members to create the application in a 48-hour Hackathon </ProjectTextP>
-                    <ProjectTextP>o Oversaw the creation of multiple UI views, configured according to design specifications</ProjectTextP>
-                    <ProjectTextP>o Incorporated Styled-Components and Material-UI to mirror Figma wireframe design files</ProjectTextP>
-                    <ProjectTextP>o Awarded Best Mobile UI in Lambda School's 2nd Annual Summer Hackathon out of 12 finalists</ProjectTextP>
-                    <ProjectTextP>o Utilized: ReactJS | Styled-Components | Material-UI | React-Router | PropTypes | Git | Figma </ProjectTextP>
-                    <ProjectLinkDiv>
-                        <PortfolioButton>
-                            <CodeLink href="https://github.com/satoshi-s-law/frontend">
-                                <LinkIcon className="fab fa-github"/>
-                                View the Code
-                            </CodeLink>
-                        </PortfolioButton>
-                        <PortfolioButton>
-                            <CodeLink href="https://www.youtube.com/watch?v=0JfRVZaGeSQ">Official Demo</CodeLink>
-                        </PortfolioButton>
-                    </ProjectLinkDiv>
-                </ProjectText>
+                <ProjectBox>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic src={HLFpic} alt="Hamilton Law Firm" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>Hamilton Law Firm, PLLC.</ProjectTextH2>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectLinkDiv>
+                            <PortfolioButton>
+                                <CodeLink href="http://hlfplano.com/">Official Website</CodeLink>
+                            </PortfolioButton>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
 
-                <ProjectTwoImage>
-                    <ProjectTwoImagePic src={SatoshiPic} alt="Satoshi's Law" />
-                </ProjectTwoImage>
-            </ProjectTwoSection>
-{/* 
-            <ProjectSection>
-                <ProjectText>
-                    <ProjectTextH2>Streemly Organizational Chart</ProjectTextH2>
-                    <ProjectTextP>Streemly Organizational Chart is an application that allows business owners to view their company hierarchy structure while also enabling a faster, more efficient decision making and approval process for administrative tasks.</ProjectTextP> 
-                    <ProjectLinkDiv>
-                        <PortfolioButton>
-                            <CodeLink href="https://github.com/build-org-chart/React-Frontend-Anthony-Piazza">
-                                <LinkIcon className="fab fa-github"/>
-                                View the Code
-                            </CodeLink>
-                        </PortfolioButton>
-                        <PortfolioButton>
-                            <CodeLink href="https://sharp-babbage-c8d5b5.netlify.com/">Official Website</CodeLink>
-                        </PortfolioButton>
-                    </ProjectLinkDiv>
-                </ProjectText>                
-                <ProjectImage>
-                    <ProjectImagePic src={Streemly} alt="Streemly Logo" />
-                </ProjectImage>
-            </ProjectSection>  */}   
+                <ProjectBox>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic src={KKSSpic} alt="Killens Enterprise Consulting" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>Killens Enterprise Consulting LLC.</ProjectTextH2>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectLinkDiv>
+                            <PortfolioButton>
+                                <CodeLink href="https://www.killensec.com/">Official Website</CodeLink>
+                            </PortfolioButton>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
+
+                <ProjectBox>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic src={TMTpic} alt="Team Mental Training" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>Team Mental Training Online Course</ProjectTextH2>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectLinkDiv>
+                            <PortfolioButton>
+                                <CodeLink href="https://www.teammentaltraining.com/">Official Website</CodeLink>
+                            </PortfolioButton>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
+
+                <ProjectBox>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic src={GCSFSpic} alt="Global Cyber Security Summit" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>2018 Global Cybersecurity Summit</ProjectTextH2>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectLinkDiv>
+                        <PortfolioButton type="button" onClick={handleOpen}>View Site Design</PortfolioButton>
+                        <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+                            <DialogContent className="dialog-content">
+                                <ResumeModal onClick={handleClose}>
+                                    <ResumeIModalImg src={GCSFSmain} alt="2018 Global CyberSecurity Website Design" />
+                                </ResumeModal>
+                            </DialogContent>
+                        </Dialog>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
+
+                <ProjectBox>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic src={Rollinpic} alt="Rollin Premier" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>Rollin Premier Crypto Trading Group</ProjectTextH2>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectLinkDiv>
+                            <PortfolioButton type="button" onClick={handleOpenRollin}>View Site Design</PortfolioButton>
+                            <Dialog onClose={handleCloseRollin} aria-labelledby="customized-dialog-title" open={openRollin}>
+                                <DialogContent className="dialog-content">
+                                    <ResumeModal onClick={handleCloseRollin}>
+                                        <ResumeIModalImg src={Rollinmain} alt="Rollin Premier Website Design" />
+                                    </ResumeModal>
+                                </DialogContent>
+                            </Dialog>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
+
+            </HorizontalFlexBoxes>
         </PortfolioContainer>
    
     )

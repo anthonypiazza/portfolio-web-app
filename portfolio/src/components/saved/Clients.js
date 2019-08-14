@@ -24,7 +24,7 @@ import {
   BottomRowPhotoGrid,
   ResumeModal,
   ResumeIModalImg
-} from './StyledComponents';
+} from '../StyledComponents';
 
 
 function Clients(props){

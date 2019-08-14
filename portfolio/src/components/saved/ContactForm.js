@@ -9,7 +9,7 @@ import {
     FormField,
     FormSubmitButton,
     TextArea
-} from './StyledComponents';
+} from '../StyledComponents';
 
 function ContactForm({ errors, touched, isSubmitting }) {
     return (

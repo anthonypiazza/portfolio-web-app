@@ -1,6 +1,11 @@
 .App {
   text-align: center;
-  background: #eff0f0;
+  background: #0b0b2d;
+  color: silver;
+  padding: 15px 10px 0px 10px;
+  font-family: komu-a, sans-serif;
+  font-weight: lighter;
+  font-style: normal;
   /* max-width: 1543px; */
 }
 
