@@ -1,8 +1,6 @@
 import React from 'react';
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
 
-import ProfileImg from '../imgs/anthony.PNG';
+import ProfileImg from '../imgs/Anthony_Piazza.jpg';
 import '../App.css';
 import {
   ContactPage,
@@ -11,69 +9,43 @@ import {
   Profile,
   ProfileImgDiv,
   ProfileImgTag,
-  ProfileHR,
   SocialLinkDiv,
   ProfileH3,
   ProfileInfoDiv,
   InfoP,
-  ResumeModal,
-  ModalButton,
-  SectionHeaderHR,
-  IconLink
+  IconLink,
+  ProfileName,
+  CityState,
+  ProfileNameHR,
+  SocialTag
 } from './StyledComponents';
 
 function AboutMe(props){
-
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   return(
     <ContactPage id={props.id}>
       <ProfileSection>
         <div>
           <ProfileH1>About Me</ProfileH1>
-          <SectionHeaderHR></SectionHeaderHR>
         </div>
       </ProfileSection>
       <Profile>
         <ProfileImgDiv>
           <ProfileImgTag src={ProfileImg} alt="Anthony Piazza" />
-          <h2>Anthony Piazza</h2>          
-          <ProfileHR/>
+          <ProfileName>Anthony Piazza</ProfileName>          
+          <ProfileNameHR/>
           <SocialLinkDiv>
-            <a href="https://github.com/anthonypiazza">
-              <i className="fab fa-github-square"/>
-            </a>
-            <a href="https://www.linkedin.com/in/piazzaanthony/">
-              <i className="fab fa-linkedin"/>
-            </a>             
+            <SocialTag style={{textDecoration: "none"}} href="https://github.com/anthonypiazza">
+              <i style={{ color: "white" }} className="fab fa-github-square"/>
+            </SocialTag>
+            <SocialTag style={{textDecoration: "none"}} href="https://www.linkedin.com/in/piazzaanthony/">
+              <i style={{ color: "white" }} className="fab fa-linkedin"/>
+            </SocialTag>             
             <IconLink to="section6" spy={true} smooth={true} offset={-70} duration= {500}>
-              <i className="fas fa-envelope"/>
+              <i style={{ fontSize: '3rem', color: "white" }} className="fas fa-envelope"/>
             </IconLink> 
           </SocialLinkDiv>
           <ProfileH3>Front End Web Developer</ProfileH3>
-          <p>Dallas, Texas</p>
-          <div>
-            <ModalButton type="button" onClick={handleOpen}>View My Resume</ModalButton>
-            <Dialog
-              onClose={handleClose}
-              aria-labelledby="customized-dialog-title"
-              open={open}
-            >
-              <DialogContent className="dialog-content">
-                <ResumeModal onClick={handleClose} >
-                <iframe title="Anthony Resume" src="https://resume.creddle.io/embed/7bfx0nakbjd" width="850" height="1100" seamless></iframe>
-                </ResumeModal>
-              </DialogContent>
-            </Dialog>
-          </div>
+          <CityState>Dallas, Texas</CityState>
         </ProfileImgDiv>
         <ProfileInfoDiv>
           <InfoP>I am a Front End Web Developer (React-focused) with a knack for 

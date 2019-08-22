@@ -1,6 +1,11 @@
 .App {
   text-align: center;
-  background: #eff0f0;
+  background: #0b0b2d;
+  color: silver;
+  padding: 15px 10px 0px 10px;
+  font-family: komu-a, sans-serif;
+  font-weight: lighter;
+  font-style: normal;
   /* max-width: 1543px; */
 }
 
@@ -158,4 +163,33 @@ i{
 i:hover{
   transition: transform .2s;
   transform: scale(1.1);
+}
+
+/* .all{
+  display:
+}
+
+.coded{
+
+}
+
+.designed{
+
+} */
+
+.show{
+  display: inherit;
+}
+
+#remove{
+  display: none;
+}
+
+#active{
+  background-color: #0b0b2d;
+  color: #eff0f0;
+}
+
+#deactive{
+  background-color: white;
 }

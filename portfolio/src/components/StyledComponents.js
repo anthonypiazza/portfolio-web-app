@@ -1,56 +1,58 @@
 import styled from 'styled-components';
 import FlowerImg from '../imgs/flower-grayscale.jpg';
 import { Link } from 'react-scroll';
-import { Form, Field } from 'formik';
 
 //ABOUTME STYLES
 
 export const ContactPage = styled.div`
-  background-image: url(${FlowerImg});
-  background-position-y: center;
-  background-size: 20%;
-  background-color: #eff0f0;
-  padding-bottom: 50px;
-  background-repeat: repeat-x;
-  margin-top: 60px;
-  font-family: 'Montserrat', sans-serif;
+    background-image: url(${FlowerImg});
+    background-position-y: center;
+    background-size: 20%;
+    background-color: #0b0b2d;
+    padding-bottom: 50px;
+    background-repeat: repeat-x;
+    margin-top: 60px;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
 `
 export const ProfileSection = styled.section`
     font-size: 1rem;
     text-align: center;
     padding-top: 10px;
 `
+
 export const ProfileH1 = styled.h1`
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-    font-size:2rem;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    margin: 0px 0% 10px 0%;
+    font-size:3rem;
+    color: silver;
+`
+
+
+export const ProfileName = styled.h2`
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 2rem;
 `
 
 export const Profile = styled.section`
     display: flex;
     flex-wrap: wrap;
     margin: 0px 15%;
+    color: white;
     align-items: center;
-    border: 1px solid black;
-    margin: 5px 20% 5px 20%;
-    background-color: #eff0f0;
-    box-shadow: 7px 7px 7px 7px rgba(0,0,0,0.5);
-    &:hover{
-        transition: transform 2s;
-        transform: scale(1.05);
-        @media( max-width: 1000px){
-            transition: none;
-            transform: none;
-        }
-    }
+    margin: 5px 3% 5px 3%;
+    background-color: #0b0b2d;
+    border: 1px solid white;
     @media (max-width: 1600px){
         margin: 0px 3%;
     }
     @media (max-width: 1000px){
         flex-direction: column;
-        border: none;
         margin: 0px 0%;
-        box-shadow: none;
         border: none;
     }
 `
@@ -60,7 +62,7 @@ export const ProfileImgDiv = styled.div`
     flex-direction: column;
     align-content: center;
     margin-right: 10%;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
     padding: 10px 5%;
     @media (max-width: 1000px){
         border-right: none;
@@ -72,7 +74,7 @@ export const ProfileImgTag = styled.img`
     height: auto;
     width: 200px;
     border-radius: 5px;
-    border: black solid 2px;
+    border: white solid 2px;
     @media (max-width: 1000px){
         margin-left: 7px;
     } 
@@ -80,6 +82,7 @@ export const ProfileImgTag = styled.img`
 
 export const ProfileHR = styled.hr`
     margin: 0px 35%;
+    border: 1px white;
 `
 
 export const SocialLinkDiv = styled.div`
@@ -89,7 +92,7 @@ export const SocialLinkDiv = styled.div`
 `
 
 export const SocialIcon = styled.i`
-    color: black;
+    color: white;
     margin-right: 10px;
     font-size: 1.2rem;
 `
@@ -106,9 +109,18 @@ export const IconLink = styled(Link)`
     }
 `
 
+export const ProfileNameHR = styled.hr`
+    border-top: 1px solid white;
+    margin: 00px 39% 10px 39%;
+    background: white;
+`
+
 export const ProfileH3 = styled.h3`
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-style: italic;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: normal;
 `
 export const ProfileInfoDiv = styled.div`
     width: 50%;
@@ -120,8 +132,22 @@ export const ProfileInfoDiv = styled.div`
 export const InfoP = styled.p`
     text-align: left;
     padding-bottom: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 2;
+    letter-spacing: .3px;
+    font-family: 'Montserrat', sans-serif;
+    @media(max-width: 600px){
+        font-size: 1rem;
+    }
+`
+
+export const CityState = styled.p`
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    line-height: 2;
+    letter-spacing: .3px;
+    margin-top: 0px;
 `
 
 export const ResumeModal = styled.div`
@@ -137,42 +163,50 @@ export const ResumeIModalImg = styled.img`
     } 
 `
 
-export const ModalButton = styled.button`
-    padding: 10px 45px;
-    border-radius: 5px;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    font-size: .9rem;
-    &:hover{
-        transition: transform .2s;
-        transform: scale(1.1);
-    }
-`
-
 
 //NAV STYLES
 export const NavSection = styled.section`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px 9%;
-    background-color: black;
+    padding: 30px 9%;
+    background-color: #0b0b2d;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 500;
-    @media (max-width: 1200px){
+    background: rgb(45, 108, 180);
+    margin: 0px 1%;
+    @media (max-width: 1000px){
         flex-direction: column-reverse;
         padding-bottom: 10px;
     }
 `
 export const LeftNav = styled.nav`
-    width: 33%;
+    width: 33%;        
+    display:flex;
+    margin-left: 7%;
+    justify-content: flex-start;
+    @media (max-width: 1600px){
+        margin-left: 5%;
+    }
+    @media (max-width: 1500px){
+        margin-left: 2%;
+    }
+    @media (max-width: 1400px){
+        margin-left: -1%;
+    }
+    @media (max-width: 1300px){
+        margin-left: -4%;
+    }
     @media (max-width: 1200px){
-        width: 100%;
+        margin-left: -7%;
+    }
+    @media (max-width: 1100px){
+        margin-left: -10%;
+    }
+    @media (max-width: 1000px){
+        display: none;
     }
 `
 
@@ -180,50 +214,38 @@ export const NavLinks = styled(Link)`
     text-decoration: none;
     color: white;
     padding: 0px 3.2%;
-    font-size: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
     &:hover{
-        font-weight: bold;
-        transition: transform .2s;
-        transform: scale(1.1);
-        border: 1px white solid;
-        border-radius: 10px;
+        text-decoration: underline;
+        color: silver;
         cursor: pointer;
     }
     &.active{
-        font-weight: bold;
-        transition: transform .2s;
-        transform: scale(1.1);
-        border: 1px white solid;
-        border-radius: 10px;
+        color: silver;
+        text-decoration: underline;
     }
     @media (max-width: 1600px) {
-        font-size: .8rem;
-        padding: 0px 2.2%;
+        font-size: 1.5rem;
+        padding: 0px;
     }
-`
-
-export const MiddleNav = styled.div`
-    width: 33%;
-    @media (max-width: 1200px){
-        width: 100%;
+    @media (max-width: 1300px) {
+        font-size: 1.4rem;
+        padding: 0px;
     }
-`
-
-export const MiddleNavText = styled.h1`
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24.5px;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 1px;
+    @media (max-width: 1000px) {
+        font-size: 1.3rem;
+        padding: 0px;
+    }
 `
 
 export const RightNav = styled.div`
     width: 33%;
-    @media (max-width: 1200px){
-        padding-bottom: 15px;
+    @media (max-width: 1600px) {
+        display:flex;
+        justify-content: space-between;
+    }
+    @media (max-width: 1000px){
         width: 100%;
     }
 `
@@ -232,7 +254,9 @@ export const ContactButton = styled(Link)`
     padding: 10px 45px;
     border-radius: 5px;
     background-color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -243,13 +267,35 @@ export const ContactButton = styled(Link)`
     }
 `
 
+export const SocialTag = styled.a`
+    display: flex;
+    align-items: center;
+
+    i{
+        font-size: 3rem;
+    }
+`
+
+export const SocialTagLink = styled(Link)`
+    display: flex;
+    align-items: center;
+    &:hover{
+        cursor: pointer;
+    }
+    i{
+        font-size: 3rem;
+    }
+`
 
 
 //PORTFOLIO STYLES
 export const PortfolioH1 = styled.h1`
-    font-family: 'Montserrat', sans-serif;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
     padding: 50px 0% 0px 0%;
     margin: 0px;
+    font-size:3rem;
     /* background: rgb(186,186,186);
     background: linear-gradient(180deg, rgba(186,186,186,1) 20%, rgba(255,255,255,1) 35%); */
     background: white;
@@ -260,7 +306,7 @@ export const PortfolioContainer = styled.div`
 `
 
 export const LinkIcon = styled.i`
-    color: black;
+    color: #0b0b2d;
     margin-right: 10px;
     font-size: 1.2rem;
 `
@@ -271,52 +317,100 @@ export const SectionHeaderHR = styled.hr`
     background: white;
 `
 
+export const ProjectBox = styled.div`
+    background-color: #eff0f0;
+    margin: 40px 2%;
+    width: 25%;
+    border: 3px solid #0b0b2d;
+    padding: 15px 0% 5px 0%;
+    color: #0b0b2d;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    /* &:hover{
+        transition: transform .2s;
+        transform: scale(1.1);
+    } */
+    @media(max-width: 1600px){
+        width: 40%;
+        margin: 40px 4%;
+    }
+    @media(max-width: 1000px){
+        width: 90%;
+        margin: 40px 8%;
+    }
+    @media(max-width: 600px){
+        margin: 40px 4%;
+        width: 100%;
+    }
+`
+
+export const HorizontalFlex = styled.div`
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 28%;
+`
+
+export const HorizontalFlexFilter = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 20%;
+`
+
+export const HorizontalFlexBoxes = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`
+
 export const ProjectSection = styled.section`
     display: flex;
     flex-direction: row-reverse;
     padding-top: 5px;
     margin-top: -5px;
     margin-bottom: -3px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
     background-color: white;
     @media (max-width: 1000px){
         flex-direction: column-reverse;
     }
 `
 export const ProjectText = styled.div`
-    width: 50%;
-    padding-top: 155px;
-    padding-bottom: 155px;
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
+    align-content: center;
+    width: 100%;
     @media (max-width: 1600px){
         padding: 10px 0% 40px 0%;
     }
-    @media (max-width: 1000px){
-        width: 100%;
-    }
 `
 export const ProjectTextH2 = styled.h2`
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    font-size: 2rem;
     font-weight: bolder;
-    text-align: left;
-    padding: 0px 10%;
+    text-align: center;
     margin-bottom: 18px;
     @media (max-width: 1000px){
-        font-size: 1.3rem;
         text-align: center;
+        margin-bottom: 0px;
     }
 `
 
 export const ProjectTextP = styled.p`
     margin: 5px 0%;
     line-height: 1.45;
-    padding: 0px 10%;
-    font-size: .9rem;
-    text-align: left;
+    padding: 10px 20%;
+    font-size: .85rem;
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-style: normal;
     @media (max-width: 1600px){
         font-size: 1.1rem;
     }
@@ -331,27 +425,30 @@ export const ProjectTextP = styled.p`
 
 export const ProjectLinkDiv = styled.div`
     display: flex;
-    justify-content: flex-start;
-    padding-left: 10%;
+    justify-content: center;
     padding-top: 30px; 
-    width: 90%;
     @media (max-width: 1000px){
-        justify-content: center;
         padding-left: 0%;
-        width: 100%;
     }
 `
 
-export const PortfolioButton = styled.button`
-    padding: 10px 45px;
+export const PortfolioBoxFilterButton = styled.button`
+    padding: 10px 25px;
     border-radius: 5px;
     background-color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
     text-decoration: none;
     color: black;
     cursor: pointer;
     font-size: .9rem;
-    margin-right: 30px;
+    margin: 0px 0%;
+    width: 100%;
+    margin-right: 0px;
+    font-size: 2rem; 
+    letter-spacing: 1px;
+    border: 1px solid #0b0b2d;
     &:hover{
         transition: transform .2s;
         transform: scale(1.1);
@@ -361,9 +458,64 @@ export const PortfolioButton = styled.button`
     }
 `
 
+export const PortfolioButton = styled.button`
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: .9rem;
+    margin: 0px 5%;
+    width: 100%;
+    &:hover{
+        transition: transform .2s;
+        transform: scale(1.1);
+    }
+    @media (max-width: 1800px){
+        padding: 10px 15px;
+    }
+    @media (max-width: 1600px){
+        padding: 10px;
+    }
+`
+
+export const ViewSiteButtonNew = styled.button`
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin: 0px 5%;
+    width: 100%;
+    &:hover{
+        transition: transform .2s;
+        transform: scale(1.1);
+    }
+    @media (max-width: 1800px){
+        padding: 10px 15px;
+        font-size: 1.2rem;
+    }
+    @media (max-width: 1600px){
+        padding: 10px;
+    }
+`
+
 export const CodeLink = styled.a`
     text-decoration: none;
     color: black;
+    font-size: 1.3rem;
+    @media(max-width: 1811px){
+        font-size: 1.2rem;
+    }
 `
 
 export const ProjectImage = styled.div`
@@ -373,7 +525,7 @@ export const ProjectImage = styled.div`
     align-items: center;
     justify-content: center;
     @media (max-width: 1000px){
-        width: 100%;
+        width: 80%;
     }
 `
 
@@ -398,43 +550,38 @@ export const ProjectTwoSection = styled.section`
 
 export const ProjectTwoImage = styled.div`
     background-color: black;
-    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0px 20%;
+    border-radius: 50%;
+    padding: 30px 0%;
     @media (max-width: 1000px){
-        width: 100%;
         padding: 30px 0%;
     }
 `
 
 export const ProjectTwoImagePic = styled.img`
     height: auto;
-    width: 30%;
-    @media (max-width: 1600px){
-        width: 40%;
-    }
-    
+    width: 50%;
+    border-radius: 20%;
 `
 
 export const ProjectThreeImage = styled.div`
-    width: 50%;
     background-color: #000000;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    margin: 0px 20%;
+    border-radius: 50%;
+    padding: 39px 0%;
     @media (max-width: 1000px){
-        width: 100%;
         padding: 30px 0%;
     }
 `
 
 export const ProjectThreeImagePic = styled.img`
-    width: 15%;
     height: auto;
-    @media (max-width: 1600px){
-        width: 25%;
-    }
 `
 
 //CLIENTS STYLES
@@ -442,7 +589,9 @@ export const ProjectThreeImagePic = styled.img`
 export const ClientSection = styled.div`
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
     background-color: white;
     padding: 50px 0% 80px 0%;
     @media (max-width: 1600px){
@@ -537,7 +686,9 @@ export const ViewSiteButton = styled.button`
     color: black;
     font-size: 16px;
     padding: 16px 32px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
     border: 1px solid black;
     border-radius: 5px;
     &:hover{
@@ -559,10 +710,12 @@ export const ViewSiteButtonLink = styled.a`
 
 export const ContactPageDiv = styled.div`
     display: flex;
-    background-color: black;
+    background-color: #0b0b2d;
     padding: 50px 0% 0px 0%;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
     flex-direction: column;
     color: white;
     @media (max-width: 1600px){}
@@ -570,111 +723,93 @@ export const ContactPageDiv = styled.div`
         padding-top: 10px;
     } 
 `
+export const ContactP = styled.p`
+    margin: 10px 0% 0px 2.5%;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 20%;
+    line-height: 2;
+    letter-spacing: .3px;
+    @media(max-width: 1600px){
+        margin-left: 4%;
+    }
+    @media(max-width: 600px){
+        font-size: 1rem;
+    }
+`
 
 export const ContactH1 = styled.h1`
     padding-top: 20px;
-    font-size: 2rem;
-    margin: 0px 0%;
+    margin: 0px 5% 15px 16.5%;
+    text-align: left;
+    font-weight: lighter;
+    font-style: normal;
+    font-size:3rem;
+    color: silver;
+    @media(max-width: 1600px){
+        margin-left: 14.5%;
+    }
+    @media(max-width: 1500px){
+        margin-left: 12.2%;
+    }
+    @media(max-width: 1400px){
+        margin-left: 10.2%;
+    }
+    @media(max-width: 1300px){
+        margin-left: 7.8%;
+    }
+    @media(max-width: 1100px){
+        margin-left: 9.8%;
+    }
 `
 
 export const MessageImg = styled.img`
-    width: 45%;
+    width: 450px;
     height: auto;
-    margin-top: 50px;
-    @media (max-width: 1000px){
+    margin-right: 300px;
+    margin-top: -70px;
+    @media (max-width: 1600px){
+        margin-right: 200px;
+    }    
+    @media (max-width: 1300px){
+        margin-right: 150px;
+    }  
+    @media (max-width: 1100px){
         display: none;
     } 
 `
 
 export const FormDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-bottom: 30px;
-`
-
-export const Footer = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  color: white;
-`
-
-export const FooterLink = styled.a`
-  text-decoration: none;
-  color: white;
-  font-size: .7rem;
-  text-align: center;
-  padding-left: 2%;
-  &:hover {
-    -webkit-text-stroke: 1px white; 
-    text-align: right;
-  }
-  @media(max-width: 1000px){
-      padding-left: 5%;
-  }
-`
-
-export const FooterP = styled.p`
-  font-size: .7rem;
-  text-align: left;
-  margin-left: 2%;
-`
-
-export const CopyrightDiv = styled.div`
-   width: 50%;
-`
-
-export const Disclaimers = styled.div`
-    display:flex;
-    align-items: center;
-    width: 50%;
-    justify-content: flex-end;
-    margin-right: 2%;
-    flex-direction: row;
-`
-
-export const FormStyle = styled(Form)`
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    border-radius: 10px;
-    padding: 10px 7%;
-    width: 40%;
-    @media(max-width: 800px){
-        width: 90%;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin-left: 13%;
+    @media(max-width: 1500px){
+        margin-left: 10.5%;
+    }
+    @media(max-width: 1400px){
+        margin-left: 8.5%;
+    }
+    @media(max-width: 1300px){
+        margin-left: 6%;
     }
 `
 
-export const FormErrors = styled.p`
-    font-size: 1rem;
+export const Footer = styled.div`
+    display: flex;
+    justify-content: center;
+    background-color: #0b0b2d;
+    color: white;
+    width: 100%;
 `
 
-export const FormField = styled(Field)`
-    padding: 10px 0% 10px 2%;
-    width: 99%;
-    margin: 5px 0% 25px 0%;
-    border: none;
-    border-radius: 5px;
-`
-export const TextArea = styled(Field)`
-    padding: 10px 200px;
-    margin: 5px 0% 25px 0%;
-    border: none;
-    border-radius: 5px;
-`
-
-export const FormSubmitButton = styled.button`
-    padding: 10px 45px;
-    border-radius: 5px;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    font-size: .9rem;
-    &:hover{
-        transition: transform .2s;
-        transform: scale(1.1);
+export const FooterP = styled.p`
+    font-size: 1.3rem;
+    text-align: left;
+    margin-left: 2%;
+    @media(max-width: 1000px){
+        font-size: 1.1rem;
     }
 `
 
@@ -686,18 +821,28 @@ export const SkillSection = styled.section`
     display: flex;
     flex-direction: column;
     padding-bottom: 83px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
 `
 export const SkillIcon = styled.i`
-    color:white;
+    color: white;
     font-size: 2.2rem;
 `
 
 export const SkillHeadline = styled.h2`
-    font-size: 1.5rem;
     text-align: center;
-    @media(max-width: 600px){
-        font-size:1.2rem;
+    color: #0b0b2d;
+    font-weight: normal;
+    font-size: 3rem;
+    @media(max-width: 700px){
+        margin: 30px 20%;
+    }
+    @media(max-width: 630px){
+        margin: 30px 15%;
+    }
+    @media(max-width: 550px){
+        margin: 30px 10%;
     }
 `
 
@@ -705,27 +850,28 @@ export const SkillName = styled.p`
     font-size: 1.2rem;
     text-align: center;
     line-height: 1.4;
-    @media (max-width: 1600px){
-        font-size: .9rem;
-    }
+    letter-spacing: .5px;
 `
 
 export const SkillBoxRow = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0px 5%;
+    margin: 0px 14%;
     @media (max-width: 1600px){
         margin: 0px 10%;
+        flex-wrap: wrap;
     }
-    @media (max-width: 1000px){
+    @media (max-width: 600px){
         flex-direction: column;
+        align-items: center;
     }
 `
 
 export const SkillBox = styled.div`
-    background-color: black;
-    margin: 40px 2.68%;
+    background-color: #0b0b2d;
+    margin: 40px 2%;
+    width: 100px;
     padding: 15px 3.2% 5px 3.2%;
     color: white;
     border-radius: 5px;
@@ -734,6 +880,13 @@ export const SkillBox = styled.div`
         transition: transform .2s;
         transform: scale(1.1);
     }
+    @media(max-width: 1600px){
+        margin: 40px 6%;
+    }
+    @media(max-width: 600px){
+        margin: 40px 2%;
+        width: 40%;
+    }
 `
 
 //HERO STYLING
@@ -741,204 +894,117 @@ export const SkillBox = styled.div`
 export const HeroSection = styled.section`
     display: flex;
     flex-direction: column;
-    background-color: #2f2f2f;
+`
+
+export const VerticalAlign = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+
+export const SocialTagHero = styled.a`
+    display: none;
+    i{
+        font-size: 3rem;
+    }
+    @media(max-width: 1000px){
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+`
+export const RowDiv = styled.div`
+    display: none;
+    @media(max-width: 1000px){
+        display: flex;
+        justify-content: center;
+        margin: 10px 0%;
+    }
 `
 
 
 export const SlideTitleDiv = styled.div`
-    margin-left: 10%; 
-    width: 100%;   
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    @media (max-width: 1600px){
-        align-items: center;
-        margin-left: 0%;
+    -webkit-box-pack: center;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 100%;
+    margin: 0px 1%;
+    padding: 30px 0%;
+    background: linear-gradient(rgb(45, 108, 180), rgb(29, 70, 114));
+    @media (max-width: 1000px){
+        flex-direction: column-reverse;
+        justify-content: center;
     } 
 `
 
-export const SecondSlideTitleDiv = styled.div`
-    margin-left: 10%; 
-    width: 80%;   
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    @media (max-width: 1600px){
-        align-items: center;
-        margin-left: 0%;
-        width: 100%;
-    } 
+export const TitleDiv = styled.div`
+    width: 100%;
 `
 
 export const FirstSlideTitle = styled.h1`
-    text-align: center;
-    font-size: 5rem;
-    font-family: 'Montserrat', sans-serif;
-    padding-top: 0px;   
+    text-align: left;
+    font-size: 6rem;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    padding-top: 0px;  
+    padding: 0px 0%;
+    font-weight: lighter; 
     color: white;   
-    @media (max-width: 1600px){
-        font-size: 3rem;
-    } 
-    @media (max-width: 1000px){
-        font-size: 2.2rem;
-        margin-top: 50px;
-    } 
+    letter-spacing: 2px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 3%;
+    @media(max-width: 1000px){
+        text-align: center;
+        font-size: 4rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 `
 
 export const FirstSlideTagline = styled.div`
-    text-align: left;
-    padding: 0px 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0% 0px 0%;
     font-size: 1.5rem;
     margin-top: -30px;
     line-height: 1.25;
     color: white; 
-    @media (max-width: 1600px){
-        font-size: 1.2rem;
-    } 
-    @media (max-width: 1000px){
-        font-size: .9rem;
-        text-align: center;
-        padding: 0px 0%;
-    } 
-`
-
-export const SlideButton = styled(Link)`
-    font-family: 'Montserrat', sans-serif;
-    padding: 16px 0%;
-    border-radius: 5px;
-    cursor: pointer;
     width: 100%;
-    border: 1px solid black;    
-    margin: 45px 80% 10px 0%;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    font-size: 1.4rem;
-    &:hover{
-        transition: transform .2s;
-        transform: scale(1.1);
-    }
-    @media (max-width: 1600px){
-        margin: 25px 35% 10px 35%;
-        font-size: 1.1rem;
-    }
-    @media (max-width: 1000px){
-        font-size: .9rem;
-        margin: 15px 30% 10px 30%;
-    } 
-`
-
-
-export const SlideButtonDiv = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 100%;
-
-`
-
-export const SecondSlideText = styled.p`
-    font-size: 1.4rem;
-    font-style: italic;
-    font-weight: 500;
-    margin-top: -10px;
-    color: black;
-    text-align: left;
-    @media (max-width: 1600px){
-        font-size: 1.1rem;
-        text-align: center;
-    } 
-    @media (max-width: 1000px){
-        font-size: .9rem;
-    } 
-`
-export const SecondSlideTagline = styled.div`
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 14px;
-    line-height: 1.25;
-    color: black;  
-`
-
-export const SecondSlideTitle = styled.h1`
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-size: 3.9rem;
-    text-align: left;
-    @media (max-width: 1600px){
-        font-size: 3rem;
-        padding-top: 10px;
-    } 
-    @media (max-width: 1000px){
-        font-size: 2.2rem;
-        text-align: center;
-        margin-top: 50px;
-    } 
-`
-
-export const SecondSlideSubTagline = styled.p`
-    font-weight: 500;
-    margin-bottom: 50px;
-    margin-top: -40px;
-    font-size: 2.2rem;
-    font-style: italic;
-    color: black;
-    text-align: left;
-    @media (max-width: 1600px){
-        font-size: 1.8rem;
-        padding-top: 15px;
-        text-align: center;
-    } 
-    @media (max-width: 1000px){
-        font-size: 1.3rem;
-    } 
-`
-
-export const SlideTwoButtonDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    @media(max-width: 1600px){
-        align-items: center;
-    }
-`
-
-export const SlideButtonTwo = styled.a`
-    font-family: 'Montserrat', sans-serif;
-    padding: 16px 70px 16px 70px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    border: 1px solid black;    
-    margin: 45px 0px 10px -140px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    font-size: 1.4rem;
-    display: flex;
-    justify-items: center;
-    &:hover{
-        transition: transform .2s;
-        transform: scale(1.1);
-    }
-    @media (max-width: 1600px){
-        /* margin: 25px 35% 10px 35%; */
-        font-size: 1.1rem;
-        margin-right: 0px;
-        margin-left: 0px;
-        margin-top: 25px;
+    @media(max-width: 100px){
         justify-content: center;
     }
-    @media (max-width: 1000px){
-        font-size: .9rem;
-        /* margin: 15px 30% 10px 30%; */
-    } 
 `
-// .button-div-3 > a{
-//     width: 100%;
-//     margin: 5px 75% 10px 9.5%;
-//     font-family: 'Montserrat', sans-serif;
-//     background-color: white;
-//     color: black;
-//     text-decoration: none;
-//     font-size: 1.4rem;
-// }
+export const HeroImage = styled.img`
+    height: 300px;
+    @media(max-width: 600px){
+        height: 200px;
+        width: auto;
+    }
+`
+
+export const FirstSlideTaglineText = styled.h3`
+    text-align: left;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    padding-top: 0px;  
+    padding: 0px 0%;
+    font-weight: lighter; 
+    letter-spacing:1px;
+    color: white;   
+    text-align: center;
+    margin: 10px 0%;
+    display: flex;
+    font-size: 2rem;
+    @media(max-width: 1000px){
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+`
 
