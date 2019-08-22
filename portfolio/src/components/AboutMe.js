@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProfileImg from '../imgs/anthony.PNG';
+import ProfileImg from '../imgs/Anthony_Piazza.jpg';
 import '../App.css';
 import {
   ContactPage,

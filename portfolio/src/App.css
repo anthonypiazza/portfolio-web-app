@@ -176,3 +176,20 @@ i:hover{
 .designed{
 
 } */
+
+.show{
+  display: inherit;
+}
+
+#remove{
+  display: none;
+}
+
+#active{
+  background-color: #0b0b2d;
+  color: #eff0f0;
+}
+
+#deactive{
+  background-color: white;
+}

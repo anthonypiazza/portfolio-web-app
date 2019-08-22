@@ -37,18 +37,39 @@ import {
     ProjectThreeImage,
     ProjectThreeImagePic,
     ProjectBox,
-    HorizontalFlex,
     HorizontalFlexBoxes,
     PortfolioBoxFilterButton,
     ResumeModal,
-    ResumeIModalImg
+    ResumeIModalImg,
+    HorizontalFlexFilter,
+    ViewSiteButtonNew
 } from './StyledComponents';
 
 const Portfolio = (props) => {
 
     const [open, setOpen] = useState(false);
     const [openRollin, setOpenRollin] = useState(false);
+    const [all, setAll] = useState(true)
+    const [coded, setCoded] = useState(false)
+    const [designed, setDesigned] = useState(false)
 
+    const handleAllButton = () => {
+        setAll(true)
+        setCoded(false)
+        setDesigned(false)
+    }
+
+    const handleCodedButton = () => {
+        setCoded(true)
+        setAll(false)
+        setDesigned(false)
+    }
+
+    const handleDesignedButton = () => {
+        setDesigned(true)
+        setAll(false)
+        setCoded(false)
+    }
 
     const handleOpen = () => {
         setOpen(true);
@@ -59,7 +80,6 @@ const Portfolio = (props) => {
     };
 
     
-
     const handleOpenRollin = () => {
         setOpenRollin(true);
     };
@@ -68,20 +88,20 @@ const Portfolio = (props) => {
         setOpenRollin(false);
     };
 
-
     return (
         <PortfolioContainer id={props.id}>
-            <PortfolioH1 style={{ marginBottom: "10px"}}>Projects</PortfolioH1>
-            <HorizontalFlex>
-                <PortfolioBoxFilterButton>All</PortfolioBoxFilterButton>
-                <PortfolioBoxFilterButton>Designed</PortfolioBoxFilterButton>
-                <PortfolioBoxFilterButton>Coded</PortfolioBoxFilterButton>
-            </HorizontalFlex>
+            <PortfolioH1 style={{ color: "#0b0b2d", marginBottom: "10px"}}>Projects</PortfolioH1>
+            <HorizontalFlexFilter>
+                <PortfolioBoxFilterButton onClick={handleAllButton} id={all ? 'active' : 'deactivate'}>All</PortfolioBoxFilterButton>
+                <PortfolioBoxFilterButton onClick={handleDesignedButton} id={designed ? 'active' : 'deactivate'} style={{margin: '0px 5%'}}>Designed</PortfolioBoxFilterButton>
+                <PortfolioBoxFilterButton onClick={handleCodedButton} id={coded ? 'active' : 'deactivate'}>Coded</PortfolioBoxFilterButton>
+            </HorizontalFlexFilter>
             <HorizontalFlexBoxes>
-                <ProjectBox>
-                    <ProjectThreeImage>
+                
+                <ProjectBox id={all || coded || designed ? 'show' : 'remove'}>
+                    <ProjectTwoImage>
                         <ProjectThreeImagePic src={Airlytics} alt="Airlytics Logo" />
-                    </ProjectThreeImage>
+                    </ProjectTwoImage>
                     <ProjectText>
                         <ProjectTextH2>Airlytics</ProjectTextH2>
                         <ProjectTextP>An AirBnB analytics tool to optimize hosts' rates of return in Berlin</ProjectTextP>
@@ -92,7 +112,7 @@ const Portfolio = (props) => {
                         <ProjectLinkDiv>
                             <PortfolioButton>
                                 <CodeLink href="https://github.com/airbnb-price-opt/front-end">
-                                    <LinkIcon className="fab fa-github"/>
+                                    <LinkIcon style={{ marginRight: '0px'}} className="fab fa-github"/>
                                     View the Code
                                 </CodeLink>
                             </PortfolioButton>
@@ -103,7 +123,7 @@ const Portfolio = (props) => {
                     </ProjectText>
                 </ProjectBox>
 
-                <ProjectBox>
+                <ProjectBox id={all || coded ? 'show' : 'remove'}>
                     <ProjectTwoImage>
                         <ProjectTwoImagePic src={SatoshiPic} alt="Satoshi's Law" />
                     </ProjectTwoImage>
@@ -113,11 +133,11 @@ const Portfolio = (props) => {
                         {/* <ProjectThreeImage style={{background: 'none'}}>    
                             <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
                         </ProjectThreeImage> */}
-                        <ProjectTextP>React  |  Material-UI  |  Git  |  Figma </ProjectTextP>
+                        <ProjectTextP style={{ padding: '10px 0px' }}>React  |  Material-UI  |  Git  |  Figma </ProjectTextP>
                         <ProjectLinkDiv>
                             <PortfolioButton>
                                 <CodeLink href="https://github.com/satoshi-s-law/frontend">
-                                    <LinkIcon className="fab fa-github"/>
+                                    <LinkIcon style={{ marginRight: '0px'}} className="fab fa-github"/>
                                     View the Code
                                 </CodeLink>
                             </PortfolioButton>
@@ -128,7 +148,7 @@ const Portfolio = (props) => {
                     </ProjectText>
                 </ProjectBox>
 
-                <ProjectBox>
+                <ProjectBox id={all || designed ? 'show' : 'remove'}>
                     <ProjectTwoImage>
                         <ProjectTwoImagePic src={HLFpic} alt="Hamilton Law Firm" />
                     </ProjectTwoImage>
@@ -145,7 +165,7 @@ const Portfolio = (props) => {
                     </ProjectText>
                 </ProjectBox>
 
-                <ProjectBox>
+                <ProjectBox id={all || designed ? 'show' : 'remove'}>
                     <ProjectTwoImage>
                         <ProjectTwoImagePic src={KKSSpic} alt="Killens Enterprise Consulting" />
                     </ProjectTwoImage>
@@ -162,7 +182,7 @@ const Portfolio = (props) => {
                     </ProjectText>
                 </ProjectBox>
 
-                <ProjectBox>
+                <ProjectBox id={all || designed ? 'show' : 'remove'}>
                     <ProjectTwoImage>
                         <ProjectTwoImagePic src={TMTpic} alt="Team Mental Training" />
                     </ProjectTwoImage>
@@ -179,7 +199,7 @@ const Portfolio = (props) => {
                     </ProjectText>
                 </ProjectBox>
 
-                <ProjectBox>
+                <ProjectBox id={all || designed ? 'show' : 'remove'}>
                     <ProjectTwoImage>
                         <ProjectTwoImagePic src={GCSFSpic} alt="Global Cyber Security Summit" />
                     </ProjectTwoImage>
@@ -189,7 +209,7 @@ const Portfolio = (props) => {
                             <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
                         </ProjectThreeImage> */}
                         <ProjectLinkDiv>
-                        <PortfolioButton type="button" onClick={handleOpen}>View Site Design</PortfolioButton>
+                        <ViewSiteButtonNew type="button" onClick={handleOpen}>View Site Design</ViewSiteButtonNew>
                         <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                             <DialogContent className="dialog-content">
                                 <ResumeModal onClick={handleClose}>
@@ -201,7 +221,7 @@ const Portfolio = (props) => {
                     </ProjectText>
                 </ProjectBox>
 
-                <ProjectBox>
+                <ProjectBox id={all || designed ? 'show' : 'remove'}>
                     <ProjectTwoImage>
                         <ProjectTwoImagePic src={Rollinpic} alt="Rollin Premier" />
                     </ProjectTwoImage>
@@ -211,7 +231,7 @@ const Portfolio = (props) => {
                             <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
                         </ProjectThreeImage> */}
                         <ProjectLinkDiv>
-                            <PortfolioButton type="button" onClick={handleOpenRollin}>View Site Design</PortfolioButton>
+                            <ViewSiteButtonNew type="button" onClick={handleOpenRollin}>View Site Design</ViewSiteButtonNew>
                             <Dialog onClose={handleCloseRollin} aria-labelledby="customized-dialog-title" open={openRollin}>
                                 <DialogContent className="dialog-content">
                                     <ResumeModal onClick={handleCloseRollin}>

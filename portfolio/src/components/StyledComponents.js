@@ -339,10 +339,10 @@ export const ProjectBox = styled.div`
     }
     @media(max-width: 1000px){
         width: 90%;
-        margin: 40px 4%;
+        margin: 40px 8%;
     }
     @media(max-width: 600px){
-        margin: 40px 5%;
+        margin: 40px 4%;
         width: 100%;
     }
 `
@@ -351,6 +351,12 @@ export const HorizontalFlex = styled.div`
     display: flex;
     justify-content: space-around;
     margin: 30px 28%;
+`
+
+export const HorizontalFlexFilter = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 20%;
 `
 
 export const HorizontalFlexBoxes = styled.div`
@@ -391,15 +397,15 @@ export const ProjectTextH2 = styled.h2`
     text-align: center;
     margin-bottom: 18px;
     @media (max-width: 1000px){
-        font-size: 1.3rem;
         text-align: center;
+        margin-bottom: 0px;
     }
 `
 
 export const ProjectTextP = styled.p`
     margin: 5px 0%;
     line-height: 1.45;
-    padding: 10px 2%;
+    padding: 10px 20%;
     font-size: .85rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -437,11 +443,12 @@ export const PortfolioBoxFilterButton = styled.button`
     color: black;
     cursor: pointer;
     font-size: .9rem;
-    margin: 0px 5%;
+    margin: 0px 0%;
     width: 100%;
     margin-right: 0px;
     font-size: 2rem; 
     letter-spacing: 1px;
+    border: 1px solid #0b0b2d;
     &:hover{
         transition: transform .2s;
         transform: scale(1.1);
@@ -468,6 +475,35 @@ export const PortfolioButton = styled.button`
         transition: transform .2s;
         transform: scale(1.1);
     }
+    @media (max-width: 1800px){
+        padding: 10px 15px;
+    }
+    @media (max-width: 1600px){
+        padding: 10px;
+    }
+`
+
+export const ViewSiteButtonNew = styled.button`
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: komu-a, sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin: 0px 5%;
+    width: 100%;
+    &:hover{
+        transition: transform .2s;
+        transform: scale(1.1);
+    }
+    @media (max-width: 1800px){
+        padding: 10px 15px;
+        font-size: 1.2rem;
+    }
     @media (max-width: 1600px){
         padding: 10px;
     }
@@ -477,6 +513,9 @@ export const CodeLink = styled.a`
     text-decoration: none;
     color: black;
     font-size: 1.3rem;
+    @media(max-width: 1811px){
+        font-size: 1.2rem;
+    }
 `
 
 export const ProjectImage = styled.div`
