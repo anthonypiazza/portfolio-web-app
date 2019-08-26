@@ -10,7 +10,7 @@ The site was primarily styled with the `Styled-Components` library
 <br/>
 <br/>
 <br/>
-And lastly, the Scroll-onClick feature was created by using the React-Scroll library while passing down an ID as props to the linked components
+The Scroll-onClick feature was created by using the React-Scroll library while passing down an ID as props to the linked components
 ![Scroll-to-Click](https://i.imgur.com/50hF6SQ.png)
 <br/>
 <br/>
