@@ -10,19 +10,9 @@ The site was primarily styled with the `Styled-Components` library
 <br/>
 <br/>
 <br/>
-The Hero Slider was imported from the React-Awesome-Slider library and adapted with relevant information
-![Awesome Slider](https://i.imgur.com/ym41Y0l.png)
-<br/>
-<br/>
-<br/>
-<br/>
-Certain components of the site including the Modal feature was rendered using the `Material-UI` library
-![Modal Example](https://i.imgur.com/6pMnVEs.png)
-<br/>
-<br/>
-<br/>
-<br/>
 And lastly, the Scroll-onClick feature was created by using the React-Scroll library while passing down an ID as props to the linked components
 ![Scroll-to-Click](https://i.imgur.com/50hF6SQ.png)
+<br/>
+<br/>
 <br/>
 <br/>
