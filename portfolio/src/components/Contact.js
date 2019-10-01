@@ -22,7 +22,7 @@ function Contact(props){
           <ContactP>Feel free to send me an email or reach out on 
           any social platform I’m active on :)</ContactP>
           <br/>
-          <ContactP>piazza.anthony.n@gmail.com</ContactP>
+          <ContactP>anthonynpiazza@gmail.com</ContactP>
         </div>
         <div>
           <MessageImg src={MessagePic} alt="Chat Message"/>

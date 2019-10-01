@@ -357,6 +357,9 @@ export const HorizontalFlexFilter = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 30px 20%;
+    @media(max-width: 550px){
+        margin: 3%;
+    }
 `
 
 export const HorizontalFlexBoxes = styled.div`
@@ -400,6 +403,11 @@ export const ProjectTextH2 = styled.h2`
         text-align: center;
         margin-bottom: 0px;
     }
+    @media (max-width: 450px){
+        padding: 0px 2%;
+        font-size: 1.6rem;
+        letter-spacing: .6px;
+    }
 `
 
 export const ProjectTextP = styled.p`
@@ -420,6 +428,7 @@ export const ProjectTextP = styled.p`
     @media (max-width: 600px){
         font-size: .95rem;
         margin-top: 20px; 
+        padding: 10px 10%;
     }
 `
 
@@ -507,14 +516,24 @@ export const ViewSiteButtonNew = styled.button`
     @media (max-width: 1600px){
         padding: 10px;
     }
+    @media(max-width: 600px){
+        font-size: 18px;
+        letter-spacing: .5px;
+    }
 `
 
 export const CodeLink = styled.a`
     text-decoration: none;
     color: black;
     font-size: 1.3rem;
-    @media(max-width: 1811px){
-        font-size: 1.2rem;
+    @media(max-width: 600px){
+        font-size: 18px;
+    }
+    @media(max-width: 450px){
+        letter-spacing: .5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `
 
@@ -963,6 +982,9 @@ export const FirstSlideTitle = styled.h1`
         font-size: 4rem;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+    @media(max-width: 600px){
+        margin-left: 0%;
     }
 `
 
