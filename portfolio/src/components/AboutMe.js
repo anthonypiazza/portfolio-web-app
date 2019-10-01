@@ -34,10 +34,10 @@ function AboutMe(props){
           <ProfileName>Anthony Piazza</ProfileName>          
           <ProfileNameHR/>
           <SocialLinkDiv>
-            <SocialTag style={{textDecoration: "none"}} href="https://github.com/anthonypiazza">
+            <SocialTag style={{textDecoration: "none"}} href="https://github.com/anthonypiazza" target="_blank">
               <i style={{ color: "white" }} className="fab fa-github-square"/>
             </SocialTag>
-            <SocialTag style={{textDecoration: "none"}} href="https://www.linkedin.com/in/piazzaanthony/">
+            <SocialTag style={{textDecoration: "none"}} href="https://www.linkedin.com/in/piazzaanthony/" target="_blank">
               <i style={{ color: "white" }} className="fab fa-linkedin"/>
             </SocialTag>             
             <IconLink to="section6" spy={true} smooth={true} offset={-70} duration= {500}>

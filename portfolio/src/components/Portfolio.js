@@ -111,13 +111,13 @@ const Portfolio = (props) => {
                         <ProjectTextP>React  |  Redux  |  Git  |  Figma</ProjectTextP> 
                         <ProjectLinkDiv>
                             <PortfolioButton>
-                                <CodeLink href="https://github.com/airbnb-price-opt/front-end">
+                                <CodeLink href="https://github.com/airbnb-price-opt/front-end" target="_blank">
                                     <LinkIcon style={{ marginRight: '0px'}} className="fab fa-github"/>
                                     View the Code
                                 </CodeLink>
                             </PortfolioButton>
                             <PortfolioButton>
-                                <CodeLink href="https://airlytics.netlify.com/">Official Website</CodeLink>
+                                <CodeLink href="https://airlytics.netlify.com/" target="_blank">Official Website</CodeLink>
                             </PortfolioButton>
                         </ProjectLinkDiv>
                     </ProjectText>
@@ -136,13 +136,13 @@ const Portfolio = (props) => {
                         <ProjectTextP style={{ padding: '10px 0px' }}>React  |  Material-UI  |  Git  |  Figma </ProjectTextP>
                         <ProjectLinkDiv>
                             <PortfolioButton>
-                                <CodeLink href="https://github.com/satoshi-s-law/frontend">
+                                <CodeLink href="https://github.com/satoshi-s-law/frontend" target="_blank">
                                     <LinkIcon style={{ marginRight: '0px'}} className="fab fa-github"/>
                                     View the Code
                                 </CodeLink>
                             </PortfolioButton>
                             <PortfolioButton>
-                                <CodeLink href="https://www.youtube.com/watch?v=0JfRVZaGeSQ">Official Demo</CodeLink>
+                                <CodeLink href="https://www.youtube.com/watch?v=0JfRVZaGeSQ" target="_blank">Official Demo</CodeLink>
                             </PortfolioButton>
                         </ProjectLinkDiv>
                     </ProjectText>
@@ -159,7 +159,7 @@ const Portfolio = (props) => {
                         </ProjectThreeImage> */}
                         <ProjectLinkDiv>
                             <PortfolioButton>
-                                <CodeLink href="http://hlfplano.com/">Official Website</CodeLink>
+                                <CodeLink href="http://hlfplano.com/" target="_blank">Official Website</CodeLink>
                             </PortfolioButton>
                         </ProjectLinkDiv>
                     </ProjectText>
@@ -176,7 +176,7 @@ const Portfolio = (props) => {
                         </ProjectThreeImage> */}
                         <ProjectLinkDiv>
                             <PortfolioButton>
-                                <CodeLink href="https://www.killensec.com/">Official Website</CodeLink>
+                                <CodeLink href="https://www.killensec.com/" target="_blank">Official Website</CodeLink>
                             </PortfolioButton>
                         </ProjectLinkDiv>
                     </ProjectText>
@@ -193,7 +193,7 @@ const Portfolio = (props) => {
                         </ProjectThreeImage> */}
                         <ProjectLinkDiv>
                             <PortfolioButton>
-                                <CodeLink href="https://www.teammentaltraining.com/">Official Website</CodeLink>
+                                <CodeLink href="https://www.teammentaltraining.com/" target="_blank">Official Website</CodeLink>
                             </PortfolioButton>
                         </ProjectLinkDiv>
                     </ProjectText>
