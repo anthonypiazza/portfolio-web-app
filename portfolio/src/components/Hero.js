@@ -28,10 +28,10 @@ const Hero = props => {
                         <FirstSlideTaglineText><i style={{color: "white"}} className="fab fa-bitcoin" />Crypto Enthusiast</FirstSlideTaglineText>
                         <FirstSlideTaglineText><i style={{color: "white"}} className="fas fa-headphones"/>Music Lover</FirstSlideTaglineText>
                         <RowDiv>
-                            <SocialTagHero href="https://github.com/anthonypiazza">
+                            <SocialTagHero href="https://github.com/anthonypiazza" target="_blank">
                                 <i style={{ color: "white" }} className="fab fa-github-square"/>
                             </SocialTagHero>
-                            <SocialTagHero href="https://www.linkedin.com/in/piazzaanthony/">
+                            <SocialTagHero href="https://www.linkedin.com/in/piazzaanthony/" target="_blank">
                                 <i style={{ color: "white" }} className="fab fa-linkedin"/>
                             </SocialTagHero>             
                             <SocialTagLink to="section6" spy={true} smooth={true} offset={-70} duration= {500}>

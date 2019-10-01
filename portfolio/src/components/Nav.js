@@ -15,10 +15,10 @@ const Nav = () => {
         <NavSection>
             <LeftNav>
                 {/* <div style={{ color: "white", fontSize: "3rem"}}>AP</div>                 */}
-                <SocialTag style={{textDecoration: "none"}} href="https://github.com/anthonypiazza">
+                <SocialTag style={{textDecoration: "none"}} href="https://github.com/anthonypiazza" target="_blank">
                     <i style={{ color: "white" }} className="fab fa-github-square"/>
                 </SocialTag>
-                <SocialTag style={{textDecoration: "none"}} href="https://www.linkedin.com/in/piazzaanthony/">
+                <SocialTag style={{textDecoration: "none"}} href="https://www.linkedin.com/in/piazzaanthony/" target="_blank">
                     <i style={{ color: "white" }} className="fab fa-linkedin"/>
                 </SocialTag>         
                 <SocialTagLink to="section6" spy={true} smooth={true} offset={-70} duration= {500}>
