@@ -14,6 +14,10 @@ import TMTpic from '../imgs/teammentaltraining.png';
 import Rollinpic from '../imgs/rollin-cover.png';
 import GCSFSmain from '../imgs/gcsfs-main.png';
 import Rollinmain from '../imgs/rollin.png';
+import BB from '../imgs/BB.png';
+import Bitcoin from '../imgs/Bitcoin.png';
+import Cat from '../imgs/cat.png';
+import Logo from '../imgs/logoanthony.png'
 import '../App.css';
 
 
@@ -143,6 +147,109 @@ const Portfolio = (props) => {
                             </PortfolioButton>
                             <PortfolioButton>
                                 <CodeLink href="https://www.youtube.com/watch?v=0JfRVZaGeSQ" target="_blank">Official Demo</CodeLink>
+                            </PortfolioButton>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
+
+                <ProjectBox id={all || coded || designed ? 'show' : 'remove'}>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic style={{height: '90px', width: '80px'}} src={Logo} alt="Portfolio Website" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>Portfolio Website</ProjectTextH2>
+                        <ProjectTextP>My portfolio site...<br/>You are already here!</ProjectTextP>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectTextP style={{ padding: '10px 0px' }}>React  |  Styled-Components  |  Git  </ProjectTextP>
+                        <ProjectLinkDiv>
+                            <PortfolioButton>
+                                <CodeLink href="https://github.com/anthonypiazza/portfolio-web-app" target="_blank">
+                                    <LinkIcon style={{ marginRight: '0px'}} className="fab fa-github"/>
+                                    View the Code
+                                </CodeLink>
+                            </PortfolioButton>
+                            <PortfolioButton>
+                                <CodeLink href="https://www.piazzaanthony.com/" target="_blank">Official Website</CodeLink>
+                            </PortfolioButton>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
+
+                <ProjectBox id={all || coded || designed ? 'show' : 'remove'}>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic style={{height: '90px', width: '80px'}} src={BB} alt="Better Business" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>Better Business</ProjectTextH2>
+                        <p style={{ margin: '0px 0px' }}>(Styling in Progress)</p>
+                        <ProjectTextP>Yelp analytics tool that analyzes common keywords from reviews</ProjectTextP>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectTextP style={{ padding: '10px 0px' }}>React  |  Redux  |  RESTful API  |  AJAX </ProjectTextP>
+                        <ProjectLinkDiv>
+                            <PortfolioButton>
+                                <CodeLink href="https://github.com/anthonypiazza/Business-Recommendations" target="_blank">
+                                    <LinkIcon style={{ marginRight: '0px'}} className="fab fa-github"/>
+                                    View the Code
+                                </CodeLink>
+                            </PortfolioButton>
+                            <PortfolioButton>
+                                <CodeLink href="https://betterbusiness.netlify.com" target="_blank">Official Website</CodeLink>
+                            </PortfolioButton>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
+
+                <ProjectBox id={all || coded || designed ? 'show' : 'remove'}>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic style={{height: '90px', width: '80px'}} src={Bitcoin} alt="The Ultimate Crypto Indicator" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>The Ultimate Crypto Indicator</ProjectTextH2>
+                        <p style={{ margin: '0px 0px' }}>(Styling in Progress)</p>
+                        <ProjectTextP>Indicator that uses Kucoin Exchange API to calculate Buy/Sell signal</ProjectTextP>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectTextP style={{ padding: '10px 0px' }}>React  |  Redux  |  Git  |  AJAX  |  JSON </ProjectTextP>
+                        <ProjectLinkDiv>
+                            <PortfolioButton>
+                                <CodeLink href="https://github.com/anthonypiazza/KucoinVolumeProfile-fe" target="_blank">
+                                    <LinkIcon style={{ marginRight: '0px'}} className="fab fa-github"/>
+                                    View the Code
+                                </CodeLink>
+                            </PortfolioButton>
+                            <PortfolioButton>
+                                <CodeLink href="https://kucoinvolumeprofilecalc.netlify.com/" target="_blank">Official Website</CodeLink>
+                            </PortfolioButton>
+                        </ProjectLinkDiv>
+                    </ProjectText>
+                </ProjectBox>
+
+                <ProjectBox id={all || coded || designed ? 'show' : 'remove'}>
+                    <ProjectTwoImage>
+                        <ProjectTwoImagePic style={{height: '90px', width: '80px'}} src={Cat} alt="Cat Food Macro Calculator" />
+                    </ProjectTwoImage>
+                    <ProjectText>
+                        <ProjectTextH2>Cat Food Macro Calculator</ProjectTextH2>
+                        <p style={{ margin: '0px 0px' }}>(Styling in Progress)</p>
+                        <ProjectTextP>App that converts cat food nutrition labels into traditional macro stats</ProjectTextP>
+                        {/* <ProjectThreeImage style={{background: 'none'}}>    
+                            <ProjectThreeImagePic style={{width: '90%'}} src={SatoshiGif} alt="Satoshi's Law Demo Gif" />
+                        </ProjectThreeImage> */}
+                        <ProjectTextP style={{ padding: '10px 0px' }}>React  |  Git  |  Hooks(16+) </ProjectTextP>
+                        <ProjectLinkDiv>
+                            <PortfolioButton>
+                                <CodeLink href="https://github.com/anthonypiazza/KucoinVolumeProfile-fe" target="_blank">
+                                    <LinkIcon style={{ marginRight: '0px'}} className="fab fa-github"/>
+                                    View the Code
+                                </CodeLink>
+                            </PortfolioButton>
+                            <PortfolioButton>
+                                <CodeLink href="https://kucoinvolumeprofilecalc.netlify.com/" target="_blank">Official Website</CodeLink>
                             </PortfolioButton>
                         </ProjectLinkDiv>
                     </ProjectText>
